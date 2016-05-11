@@ -1,0 +1,354 @@
+2016-04-27 12:09:20 [192.168.75.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.75.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:76
+    in /mnt/hgfs/yii2/backend/controllers/SiteController.php:73
+2016-04-27 12:09:20 [192.168.75.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2p9jcnajdaf5pr6mh7bsueaur5'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=2p9jcnajdaf5pr6mh7bsueaur5'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.75.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.75.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '53324'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461758960.48
+    'REQUEST_TIME' => 1461758960
+]
+2016-04-27 15:08:56 [192.168.146.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.146.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:76
+    in /mnt/hgfs/yii2/backend/controllers/SiteController.php:73
+2016-04-27 15:08:56 [192.168.146.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1gbiebo9t19j45h8fepg9huun6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=1gbiebo9t19j45h8fepg9huun6'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.146.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.146.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '54571'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461769736.356
+    'REQUEST_TIME' => 1461769736
+]
+2016-05-09 13:30:04 [127.0.0.1][-][2vsfoa8dsat8kkc6k1o584vbc7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/loginfront.dev' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php:125
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('loginfront.dev', Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/loginfront...', Array)
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2016-05-09 13:30:04 [127.0.0.1][-][2vsfoa8dsat8kkc6k1o584vbc7][info][application] $_GET = [
+    'r' => 'site/loginfront.dev'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2vsfoa8dsat8kkc6k1o584vbc7'
+    '_csrf' => 'a2df274901542f3d130f12fa4f24d5e51643a34cb5040d4d9d916b15ee4e52efa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Q0QAn_yE8SVuCR8sMIsy6WFjSodYRJIu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=2vsfoa8dsat8kkc6k1o584vbc7; _csrf=a2df274901542f3d130f12fa4f24d5e51643a34cb5040d4d9d916b15ee4e52efa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Q0QAn_yE8SVuCR8sMIsy6WFjSodYRJIu%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '35620'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Floginfront.dev'
+    'REQUEST_URI' => '/index.php?r=site%2Floginfront.dev'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1462800604.619
+    'REQUEST_TIME' => 1462800604
+]
+2016-05-10 11:35:52 [192.168.64.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.64.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:76
+    in /mnt/hgfs/yii2/backend/controllers/SiteController.php:73
+2016-05-10 11:35:52 [192.168.64.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '40hm1kf4oeufkj33aar4r2js13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=40hm1kf4oeufkj33aar4r2js13'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.64.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.64.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '57272'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1462880152.724
+    'REQUEST_TIME' => 1462880152
+]
+2016-05-11 09:19:17 [192.168.64.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.64.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:76
+    in /mnt/hgfs/yii2/backend/controllers/SiteController.php:73
+2016-05-11 09:19:17 [192.168.64.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6bjp6p041g12qqdnnanla9vcf3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=6bjp6p041g12qqdnnanla9vcf3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.64.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.64.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60501'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1462958357.814
+    'REQUEST_TIME' => 1462958357
+]
+2016-05-11 09:43:03 [192.168.64.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.64.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:76
+    in /mnt/hgfs/yii2/backend/controllers/SiteController.php:73
+2016-05-11 09:43:03 [192.168.64.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6bjp6p041g12qqdnnanla9vcf3'
+    '_csrf' => 'e79dd5c3e9d25e819203028ecfac064ecc63a313b6208b541ca027687834c26ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LBhUyOhwul1F-vV3D_PSluf4uUpsJqJW\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=6bjp6p041g12qqdnnanla9vcf3; _csrf=e79dd5c3e9d25e819203028ecfac064ecc63a313b6208b541ca027687834c26ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LBhUyOhwul1F-vV3D_PSluf4uUpsJqJW%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.64.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.64.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '62014'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1462959783.061
+    'REQUEST_TIME' => 1462959783
+]
+2016-05-11 09:43:11 [192.168.64.1][2][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.64.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:76
+    in /mnt/hgfs/yii2/backend/controllers/SiteController.php:58
+2016-05-11 09:43:11 [192.168.64.1][2][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '30egalikbbqlve8d03t09vn2h4'
+    '_csrf' => 'e79dd5c3e9d25e819203028ecfac064ecc63a313b6208b541ca027687834c26ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LBhUyOhwul1F-vV3D_PSluf4uUpsJqJW\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Flogin'
+    'HTTP_COOKIE' => 'PHPSESSID=30egalikbbqlve8d03t09vn2h4; _csrf=e79dd5c3e9d25e819203028ecfac064ecc63a313b6208b541ca027687834c26ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LBhUyOhwul1F-vV3D_PSluf4uUpsJqJW%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.64.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.64.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '62015'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1462959791.142
+    'REQUEST_TIME' => 1462959791
+]
