@@ -28,3 +28,9 @@ composer.phar
 phpunit.phar
 # local phpunit config
 /phpunit.xml
+
+/backend/config/main-local.php
+/backend/runtime
+/frontend/config/main-local.php 
+/frontend/runtime
+
