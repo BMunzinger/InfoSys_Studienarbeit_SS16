@@ -6,6 +6,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
+use common\models\Dozent;
 
 /**
  * Site controller
@@ -26,7 +27,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index', 'dozent'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -79,5 +80,17 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+    
+    /**
+     * Displays view page.
+     *
+     * @return mixed
+     */
+    public function actionDozent()
+    {
+        $query = Dozent::find()->all();
+        
+        return $this->render('dozent', ['dozents' => $query]);
     }
 }
