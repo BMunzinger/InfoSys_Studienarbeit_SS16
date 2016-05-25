@@ -1,4 +1,5 @@
 <?php
+
 namespace backend\controllers;
 
 use Yii;
@@ -7,17 +8,18 @@ use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
 use common\models\Dozent;
+use common\models\Dozentfach;
+use yii\web\NotFoundHttpException;
 
 /**
  * Site controller
  */
-class SiteController extends Controller
-{
+class SiteController extends Controller {
+
     /**
      * @inheritdoc
      */
-    public function behaviors()
-    {
+    public function behaviors() {
         return [
             'access' => [
                 'class' => AccessControl::className(),
@@ -27,7 +29,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'dozent'],
+                        'actions' => ['logout', 'index', 'dozent', 'view', 'dozentfach', 'edit'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -45,8 +47,7 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
-    public function actions()
-    {
+    public function actions() {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -54,13 +55,11 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionIndex()
-    {
+    public function actionIndex() {
         return $this->render('index');
     }
 
-    public function actionLogin()
-    {
+    public function actionLogin() {
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -70,27 +69,44 @@ class SiteController extends Controller
             return $this->goBack();
         } else {
             return $this->render('login', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
     }
 
-    public function actionLogout()
-    {
+    public function actionLogout() {
         Yii::$app->user->logout();
 
         return $this->goHome();
     }
-    
+
     /**
      * Displays view page.
      *
      * @return mixed
      */
-    public function actionDozent()
-    {
+    public function actionDozent() {
         $query = Dozent::find()->all();
-        
+
         return $this->render('dozent', ['dozents' => $query]);
     }
+    
+    public function actionDozentfach() {
+        $query = Dozentfach::find()->all();
+
+        return $this->render('dozentfach', ['dozentfächer' => $query]);
+    }
+    
+
+    public function actionEdit($id) {
+        $model = Dozentfach::findOne($id);
+        if ($model === null) {
+            throw new NotFoundHttpException;
+        }
+
+        return $this->render('edit', [
+                    'model' => $model,
+        ]);
+    }
+
 }

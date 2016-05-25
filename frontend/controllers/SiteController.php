@@ -4,6 +4,7 @@ namespace frontend\controllers;
 use Yii;
 use common\models\LoginForm;
 use common\models\Dozent;
+use common\models\Menu_item;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -73,7 +74,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $query = Menu_item::find()->all();
+
+        return $this->render('index', ['items' => $query]);
     }
 
     /**
@@ -216,5 +219,16 @@ class SiteController extends Controller
         $query = Dozent::find()->all();
 
         return $this->render('dozent', ['dozents' => $query]);
+    }
+    
+    public function actionDozentview($id) {
+        $model = Dozent::findOne($id);
+        if ($model === null) {
+            throw new NotFoundHttpException;
+        }
+
+        return $this->render('dozentview', [
+                    'dozent' => $model,
+        ]);
     }
 }

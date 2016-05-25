@@ -18,7 +18,5 @@ use yii\helpers\Html;
     <td><?= $dozent->Name ?></td>
     <td><?= $dozent->Vorname ?></td>
 </tr>
-
-
 <?php } ?>
 </table>
