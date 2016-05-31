@@ -6,6 +6,7 @@ use Yii;
 use common\models\LoginForm;
 use common\models\Dozent;
 use common\models\Menu_item;
+use common\models\Vvs;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -78,7 +79,20 @@ class SiteController extends Controller {
     }
 
     public function actionVvs() {
-        return $this->render('vvs');
+        $query = Vvs::find()->all();
+
+        return $this->render('vvs', ['items' => $query]);
+    }
+
+    public function actionVvsview($id) {
+        $model = Vvs::findOne($id);
+        if ($model === null) {
+            throw new NotFoundHttpException;
+        }
+
+        return $this->render('vvsview', [
+                    'vvs' => $model,
+        ]);
     }
 
     /**

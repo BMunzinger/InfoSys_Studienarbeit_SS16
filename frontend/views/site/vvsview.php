@@ -1,0 +1,1 @@
+<embed src="media/vvs/<?= ucwords(str_replace(' ', '', $vvs->name)) ?>.pdf" width="100%" height="2000px">

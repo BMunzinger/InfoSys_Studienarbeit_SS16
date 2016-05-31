@@ -8,7 +8,6 @@ use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
 use common\models\Dozent;
-use common\models\Dozentfach;
 use yii\web\NotFoundHttpException;
 
 /**
@@ -29,7 +28,7 @@ class SiteController extends Controller {
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'dozent', 'view', 'dozentfach', 'edit'],
+                        'actions' => ['logout', 'index', 'dozent', 'view'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -89,24 +88,6 @@ class SiteController extends Controller {
         $query = Dozent::find()->all();
 
         return $this->render('dozent', ['dozents' => $query]);
-    }
-    
-    public function actionDozentfach() {
-        $query = Dozentfach::find()->all();
-
-        return $this->render('dozentfach', ['dozentfächer' => $query]);
-    }
-    
-
-    public function actionEdit($id) {
-        $model = Dozentfach::findOne($id);
-        if ($model === null) {
-            throw new NotFoundHttpException;
-        }
-
-        return $this->render('edit', [
-                    'model' => $model,
-        ]);
     }
 
 }
