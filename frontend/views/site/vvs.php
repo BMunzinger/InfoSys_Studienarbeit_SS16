@@ -1,5 +1,6 @@
 <?php
-
+$this->title = 'VVS';
+$this->params['breadcrumbs'][] = $this->title;
 use yii\helpers\Html;
 
 foreach ($items as $item) {

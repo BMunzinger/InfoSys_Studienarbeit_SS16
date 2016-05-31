@@ -224,6 +224,11 @@ class SiteController extends Controller {
         ]);
     }
 
+	public function actionNews()
+    {
+        return $this->render('news');
+    }
+
     public function actionDozent() {
         $query = Dozent::find()->all();
 
