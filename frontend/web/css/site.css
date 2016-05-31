@@ -1,3 +1,11 @@
+.breadcrumb{
+    background-color: #222222;
+    width: 50%;
+    float: left;
+    padding-top: 15px;
+    margin-bottom: 0px;
+}
+
 html,
 body {
     height: 100%;
