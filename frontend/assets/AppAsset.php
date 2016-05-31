@@ -18,10 +18,10 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        
         'Metro-Bootstrap/css/metro-bootstrap.css',
         'Font-Awesome/css/font-awesome.css',
-        'css/site.css'
+        'css/site.css',
+        '',
     ];
     public $js = [
     ];

@@ -210,10 +210,16 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-    
-     public function actionNews()
+
+	public function actionNews()
     {
         return $this->render('news');
+    }
+
+    public function actionDozent() {
+        $query = Dozent::find()->all();
+
+        return $this->render('dozent', ['dozents' => $query]);
     }
 }
 
