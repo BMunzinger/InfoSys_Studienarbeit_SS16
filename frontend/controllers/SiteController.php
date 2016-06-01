@@ -1,10 +1,14 @@
 <?php
+
 namespace frontend\controllers;
+
 use Yii;
 use common\models\LoginForm;
 use common\models\Dozent;
 use common\models\Menu_item;
 use common\models\Vvs;
+use common\models\Fach;
+use common\models\Kursplan;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -14,10 +18,12 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+
 /**
  * Site controller
  */
 class SiteController extends Controller {
+
     /**
      * @inheritdoc
      */
@@ -47,6 +53,7 @@ class SiteController extends Controller {
             ],
         ];
     }
+
     /**
      * @inheritdoc
      */
@@ -61,6 +68,7 @@ class SiteController extends Controller {
             ],
         ];
     }
+
     /**
      * Displays homepage.
      *
@@ -70,10 +78,12 @@ class SiteController extends Controller {
         $query = Menu_item::find()->all();
         return $this->render('index', ['items' => $query]);
     }
+
     public function actionVvs() {
         $query = Vvs::find()->all();
         return $this->render('vvs', ['items' => $query]);
     }
+
     public function actionVvsview($id) {
         $model = Vvs::findOne($id);
         if ($model === null) {
@@ -83,6 +93,7 @@ class SiteController extends Controller {
                     'vvs' => $model,
         ]);
     }
+
     /**
      * Logs in a user.
      *
@@ -101,6 +112,7 @@ class SiteController extends Controller {
             ]);
         }
     }
+
     /**
      * Logs out the current user.
      *
@@ -110,6 +122,7 @@ class SiteController extends Controller {
         Yii::$app->user->logout();
         return $this->goHome();
     }
+
     /**
      * Displays contact page.
      *
@@ -130,6 +143,7 @@ class SiteController extends Controller {
             ]);
         }
     }
+
     /**
      * Displays about page.
      *
@@ -138,6 +152,7 @@ class SiteController extends Controller {
     public function actionAbout() {
         return $this->render('about');
     }
+
     /**
      * Signs user up.
      *
@@ -156,6 +171,7 @@ class SiteController extends Controller {
                     'model' => $model,
         ]);
     }
+
     /**
      * Requests password reset.
      *
@@ -175,6 +191,7 @@ class SiteController extends Controller {
                     'model' => $model,
         ]);
     }
+
     /**
      * Resets password.
      *
@@ -196,14 +213,16 @@ class SiteController extends Controller {
                     'model' => $model,
         ]);
     }
-	public function actionNews()
-    {
+
+    public function actionNews() {
         return $this->render('news');
     }
+
     public function actionDozent() {
         $query = Dozent::find()->all();
         return $this->render('dozent', ['dozents' => $query]);
     }
+
     public function actionDozentview($id) {
         $model = Dozent::findOne($id);
         if ($model === null) {
@@ -213,4 +232,20 @@ class SiteController extends Controller {
                     'dozent' => $model,
         ]);
     }
+
+    public function actionKursplan() {
+        $query = Kursplan::find()->joinWith('dozent', 'fach')->all();
+
+        foreach ($query as $q) {
+            $query = new \yii2fullcalendar\models\Event();
+            $query->id = $time->id;
+            $query->title = $time->categoryAsString;
+            $query->start = date('Y-m-d\Th:m:s\Z', strtotime($time->date_start . ' ' . $time->time_start));
+            $query->end = date('Y-m-d\Th:m:s\Z', strtotime($time->date_start . ' ' . $time->time_end));
+            $events[] = $Event;
+        }
+
+        return $this->render('kursplan', ['kursplan' => $query]);
+    }
+
 }
