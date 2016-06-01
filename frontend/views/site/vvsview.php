@@ -4,4 +4,4 @@ $this->params['breadcrumbs'][] = ['label' => 'VVS', 'url' => ['vvs']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<embed src="media/vvs/<?= ucwords(str_replace(' ', '', $vvs->name)) ?>.pdf" width="100%" height="2000px">
+<embed src="<?= $vvs->file_path . $vvs->name ?>.pdf" width="100%" height="2000px">

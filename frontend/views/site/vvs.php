@@ -8,7 +8,7 @@ foreach ($items as $item) {
     <div class="col-md-4">
         <?=
         Html::a('<div class="thumbnail tile tile-wide tile-teal">'
-                . '<h1 class="dozentName">' . ucwords($item->name) . '</h1><h2>(' . ucwords($item->bus_stop) . ')</h2></div>'
+                . '<h1 class="dozentName">' . ucwords($item->name) . '</h1><h2>(' . ucwords($item->direction) . ')</h2></div>'
                 , ['vvsview', 'id' => $item->id])
         ?>
     </div>
