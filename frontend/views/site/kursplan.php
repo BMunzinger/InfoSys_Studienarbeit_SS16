@@ -15,7 +15,7 @@ foreach ($kursplan as $k) {
         'lang' => 'de',
         //... more options to be defined here!
       ],
-    'events' => $events,
+   
     ]);
 ?>
 

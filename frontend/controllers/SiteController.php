@@ -236,15 +236,6 @@ class SiteController extends Controller {
     public function actionKursplan() {
         $query = Kursplan::find()->joinWith('dozent', 'fach')->all();
 
-        foreach ($query as $q) {
-            $query = new \yii2fullcalendar\models\Event();
-            $query->id = $time->id;
-            $query->title = $time->categoryAsString;
-            $query->start = date('Y-m-d\Th:m:s\Z', strtotime($time->date_start . ' ' . $time->time_start));
-            $query->end = date('Y-m-d\Th:m:s\Z', strtotime($time->date_start . ' ' . $time->time_end));
-            $events[] = $Event;
-        }
-
         return $this->render('kursplan', ['kursplan' => $query]);
     }
 
