@@ -236,7 +236,20 @@ class SiteController extends Controller {
     public function actionKursplan() {
         $query = Kursplan::find()->joinWith('dozent', 'fach')->all();
 
-        return $this->render('kursplan', ['kursplan' => $query]);
+        $events = [];
+        foreach ($query as $e) {
+            $event = new \common\models\Event();
+            $event->id = $e->ID;
+            $event->title = $e->Fach;
+            $event->start = date('Y-m-d\TH:i:s\Z');
+            $event->end = '2016-6-6 09:30:00';
+            $events[] = $event;
+        }
+
+
+        return $this->render('kursplan', ['kursplan' => $query, 'events' => $events]);
+//
+//        return $this->render('kursplan', ['kursplan' => $query]);
     }
 
 }
