@@ -14,6 +14,7 @@ $this->title = 'Dozent';
         <tr>
             <th>Name</th>
             <th>Vorname</th>
+            <th>Position</th>
             <th style="width: 1%;"></th>
         </tr>
 
@@ -23,6 +24,7 @@ $this->title = 'Dozent';
             <tr>
                 <td><?= $dozent->Name ?></td>
                 <td><?= $dozent->Vorname ?></td>
+                <td><?= $dozent->Position ?></td>
                 <td><?= Html::a('<span style="float: right;" class="btn-label">Show all</span>', ['edit', 'id' => $dozent->ID], ['class' => 'btn btn-primary']) ?></td>
             </tr>
 
