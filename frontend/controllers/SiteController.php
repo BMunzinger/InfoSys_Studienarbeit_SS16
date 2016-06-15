@@ -232,7 +232,7 @@ class SiteController extends Controller {
                     'dozent' => $model,
         ]);
     }
-    
+
     public function actionKursplanview() {
         $query = Kursplan::find()->orderBy('Semester')->select('Semester')->distinct()->all();
         if ($query === null) {
@@ -247,32 +247,33 @@ class SiteController extends Controller {
         $query = Kursplan::find()->joinWith('dozent', 'fach')->where(['Semester' => $kurs])->all();
 
         $events = [];
-        $weekdays = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'];
         foreach ($query as $e) {
             switch ($e->Wochentag) {
-                    case 'Montag': $weekday = 1; break;
-                    case 'Dienstag': $weekday = 2; break;
-                    case 'Mittwoch': $weekday = 3; break;
-                    case 'Donnerstag': $weekday = 4; break;
-                    case 'Freitag': $weekday = 5; break;
-                    case 'Samstag': $weekday = 6; break;
-                    case 'Sonntag': $weekday = 7; break;
+                case 'Montag': $weekday = 1;
+                    break;
+                case 'Dienstag': $weekday = 2;
+                    break;
+                case 'Mittwoch': $weekday = 3;
+                    break;
+                case 'Donnerstag': $weekday = 4;
+                    break;
+                case 'Freitag': $weekday = 5;
+                    break;
+                case 'Samstag': $weekday = 6;
+                    break;
+                case 'Sonntag': $weekday = 7;
+                    break;
             }
-                    $event = new \common\models\Event();
+            $event = new \common\models\Event();
             $event->id = $e->ID;
-//            $event->title = $e->Fach['Name'] . '/n' . $e->Raum . '/n' . $e->dozent['Name'];
-                    $event->title = $e->fach['Name'] . "\r\n" . $e->Raum . "\r\n" . $e->dozent['Name'];
+            $event->title = $e->fach['Name'] . "\r\n" . $e->Raum . " " . $e->dozent['Vorname'] . ' ' . $e->dozent['Name'];
             $event->start = $e->ZeitVon;
             $event->end = $e->ZeitBis;
-//            $event->end = '2016-6-16T09:30:00';
-                    $event->dow = [$weekday];
+            $event->dow = [$weekday];
             $events[] = $event;
-            }
+        }
 
-
-            return $this->render('kursplan', [ 'kursplan' => $query, 'events' => $events]);
-//
-//        return $this->render('kursplan', ['kursplan' => $query]);
+        return $this->render('kursplan', [ 'kurs' => $kurs, 'events' => $events]);
     }
 
 }
