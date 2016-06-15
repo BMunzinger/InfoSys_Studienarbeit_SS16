@@ -1,5 +1,6 @@
 <?php
 $this->title = 'News';
+$this->params['breadcrumbs'][] = ['label' => 'Overview', 'url' => ['tiles']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-news">
@@ -45,12 +46,13 @@ echo '<p>'.$description.'</p>';-->
         color: white;
         background-color: #34495e;
     }
-    .site-news{
+    .site-news .site-welcome{
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
     .news{
         padding: 0;
+        font-size: 15px;
     }
 </style>
 

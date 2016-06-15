@@ -1,14 +1,11 @@
 <?php
-
 namespace frontend\controllers;
-
 use Yii;
 use common\models\LoginForm;
 use common\models\Dozent;
 use common\models\Menu_item;
 use common\models\Vvs;
-use common\models\Fach;
-use common\models\Kursplan;
+use common\models\News;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -18,12 +15,10 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-
 /**
  * Site controller
  */
 class SiteController extends Controller {
-
     /**
      * @inheritdoc
      */
@@ -53,7 +48,6 @@ class SiteController extends Controller {
             ],
         ];
     }
-
     /**
      * @inheritdoc
      */
@@ -68,22 +62,20 @@ class SiteController extends Controller {
             ],
         ];
     }
-
     /**
      * Displays homepage.
      *
      * @return mixed
      */
     public function actionIndex() {
-        $query = Menu_item::find()->all();
-        return $this->render('index', ['items' => $query]);
+        $model = News::find()->all();
+        return $this->render('index', ['model' => $model]);
+        //return $this->render('index');
     }
-
     public function actionVvs() {
         $query = Vvs::find()->all();
         return $this->render('vvs', ['items' => $query]);
     }
-
     public function actionVvsview($id) {
         $model = Vvs::findOne($id);
         if ($model === null) {
@@ -93,7 +85,6 @@ class SiteController extends Controller {
                     'vvs' => $model,
         ]);
     }
-
     /**
      * Logs in a user.
      *
@@ -112,7 +103,6 @@ class SiteController extends Controller {
             ]);
         }
     }
-
     /**
      * Logs out the current user.
      *
@@ -122,7 +112,6 @@ class SiteController extends Controller {
         Yii::$app->user->logout();
         return $this->goHome();
     }
-
     /**
      * Displays contact page.
      *
@@ -143,7 +132,6 @@ class SiteController extends Controller {
             ]);
         }
     }
-
     /**
      * Displays about page.
      *
@@ -152,7 +140,6 @@ class SiteController extends Controller {
     public function actionAbout() {
         return $this->render('about');
     }
-
     /**
      * Signs user up.
      *
@@ -171,7 +158,6 @@ class SiteController extends Controller {
                     'model' => $model,
         ]);
     }
-
     /**
      * Requests password reset.
      *
@@ -191,7 +177,6 @@ class SiteController extends Controller {
                     'model' => $model,
         ]);
     }
-
     /**
      * Resets password.
      *
@@ -213,16 +198,14 @@ class SiteController extends Controller {
                     'model' => $model,
         ]);
     }
-
-    public function actionNews() {
+	public function actionNews()
+    {
         return $this->render('news');
     }
-
     public function actionDozent() {
         $query = Dozent::find()->all();
         return $this->render('dozent', ['dozents' => $query]);
     }
-
     public function actionDozentview($id) {
         $model = Dozent::findOne($id);
         if ($model === null) {
@@ -232,48 +215,12 @@ class SiteController extends Controller {
                     'dozent' => $model,
         ]);
     }
-
-    public function actionKursplanview() {
-        $query = Kursplan::find()->orderBy('Semester')->select('Semester')->distinct()->all();
-        if ($query === null) {
+    public function actionTiles() {
+        //console.log("actionTiles");
+        $model = Menu_item::find()->all();
+        if ($model === null) {
             throw new NotFoundHttpException;
         }
-        return $this->render('kursplanview', [
-                    'kursplan' => $query,
-        ]);
+        return $this->render('tiles', ['model' => $model]);
     }
-
-    public function actionKursplan($kurs) {
-        $query = Kursplan::find()->joinWith('dozent', 'fach')->where(['Semester' => $kurs])->all();
-
-        $events = [];
-        foreach ($query as $e) {
-            switch ($e->Wochentag) {
-                case 'Montag': $weekday = 1;
-                    break;
-                case 'Dienstag': $weekday = 2;
-                    break;
-                case 'Mittwoch': $weekday = 3;
-                    break;
-                case 'Donnerstag': $weekday = 4;
-                    break;
-                case 'Freitag': $weekday = 5;
-                    break;
-                case 'Samstag': $weekday = 6;
-                    break;
-                case 'Sonntag': $weekday = 7;
-                    break;
-            }
-            $event = new \common\models\Event();
-            $event->id = $e->ID;
-            $event->title = $e->fach['Name'] . "\r\n" . $e->Raum . " " . $e->dozent['Vorname'] . ' ' . $e->dozent['Name'];
-            $event->start = $e->ZeitVon;
-            $event->end = $e->ZeitBis;
-            $event->dow = [$weekday];
-            $events[] = $event;
-        }
-
-        return $this->render('kursplan', [ 'kurs' => $kurs, 'events' => $events]);
-    }
-
 }

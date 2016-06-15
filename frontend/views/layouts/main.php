@@ -53,11 +53,15 @@ AppAsset::register($this);
     <?php 
     setlocale(LC_ALL, "de_DE.utf8");
     $glock = [
-        ['label' => strftime('%A, %e.%B %Y %H:%M')]
+        ['label' => strftime('%A')
+            .', der '
+            .date('d.m.Y H:i')
+            .' Uhr.']
     ];
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $glock,
+        'options' => ['class' => 'navbar-nav navbar-right clock'],
+        'items' => ['label' => ''],
+ 
       
     ]);
     NavBar::end();
@@ -71,6 +75,32 @@ AppAsset::register($this);
 </div>
 
 <?php $this->endBody() ?>
+    
+    <footer class="footer">
+    <div class="container">
+         <marquee direction="left" class="newsTicker">www.eKiwi.de</marquee>   
+    </div>
+</footer>
+   
 </body>
+
+
+<style>
+    .footer{
+        background-color: #222222;
+    }
+    .newsTicker{
+        margin: 0;
+        padding: 0;
+        color: #ffffff;
+        font-size: 15px;
+    }
+    .clock{
+        font-size: 20px;
+        margin-top: 10px;
+        color: #ffffff;
+    }
+</style>
+
 </html>
 <?php $this->endPage() ?>
