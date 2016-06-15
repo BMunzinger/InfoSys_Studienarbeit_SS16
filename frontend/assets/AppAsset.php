@@ -21,10 +21,13 @@ class AppAsset extends AssetBundle
         'Metro-Bootstrap/css/metro-bootstrap.css',
         'Font-Awesome/css/font-awesome.css',
         'css/site.css',
-        '',
+        'Fullcalendar/fullcalendar.css',
     ];
     public $js = [
-        'Scripts/clock.js'
+        'Scripts/clock.js',
+        'Fullcalendar/lib/moment.min.js',
+        'Fullcalendar/fullcalendar.js',
+        'Fullcalendar/lang-all.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
