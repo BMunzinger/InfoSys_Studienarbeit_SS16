@@ -5,12 +5,11 @@ $this->title = 'Kursplan';
 
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <div id="calendar"></div>
 
 <script>
     $(document).ready(function () {
-        // page is now ready, initialize the calendar...
-
         $('#calendar').fullCalendar({
             header: {
                 left: '',
@@ -21,7 +20,6 @@ $this->params['breadcrumbs'][] = $this->title;
             lang: 'de',
             defaultView: 'agendaWeek',
             allDaySlot: false,
-            slotEventOverlap: false,
             axisFormat: 'HH:mm',
             slots: [
                 {start: '07:35', end: '09:05'},
@@ -29,10 +27,15 @@ $this->params['breadcrumbs'][] = $this->title;
                 {start: '11:15', end: '12:45'},
                 {start: '14:00', end: '15:30'},
                 {start: '15:45', end: '17:15'},
-                {start: '17:30', end: '19:00'},
+                {start: '17:30', end: '19:00'}
             ],
-            // put your options and callbacks here
+            events: <?php echo json_encode($events) ?>
         });
-
     });
 </script>
+
+<style>
+    .fc-content .fc-time{
+        display : none;
+    }
+</style>

@@ -232,22 +232,45 @@ class SiteController extends Controller {
                     'dozent' => $model,
         ]);
     }
+    
+    public function actionKursplanview() {
+        $query = Kursplan::find()->orderBy('Semester')->select('Semester')->distinct()->all();
+        if ($query === null) {
+            throw new NotFoundHttpException;
+        }
+        return $this->render('kursplanview', [
+                    'kursplan' => $query,
+        ]);
+    }
 
-    public function actionKursplan() {
-        $query = Kursplan::find()->joinWith('dozent', 'fach')->all();
+    public function actionKursplan($kurs) {
+        $query = Kursplan::find()->joinWith('dozent', 'fach')->where(['Semester' => $kurs])->all();
 
         $events = [];
+        $weekdays = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'];
         foreach ($query as $e) {
-            $event = new \common\models\Event();
+            switch ($e->Wochentag) {
+                    case 'Montag': $weekday = 1; break;
+                    case 'Dienstag': $weekday = 2; break;
+                    case 'Mittwoch': $weekday = 3; break;
+                    case 'Donnerstag': $weekday = 4; break;
+                    case 'Freitag': $weekday = 5; break;
+                    case 'Samstag': $weekday = 6; break;
+                    case 'Sonntag': $weekday = 7; break;
+            }
+                    $event = new \common\models\Event();
             $event->id = $e->ID;
-            $event->title = $e->Fach;
-            $event->start = date('Y-m-d\TH:i:s\Z');
-            $event->end = '2016-6-6 09:30:00';
+//            $event->title = $e->Fach['Name'] . '/n' . $e->Raum . '/n' . $e->dozent['Name'];
+                    $event->title = $e->fach['Name'] . "\r\n" . $e->Raum . "\r\n" . $e->dozent['Name'];
+            $event->start = $e->ZeitVon;
+            $event->end = $e->ZeitBis;
+//            $event->end = '2016-6-16T09:30:00';
+                    $event->dow = [$weekday];
             $events[] = $event;
-        }
+            }
 
 
-        return $this->render('kursplan', ['kursplan' => $query, 'events' => $events]);
+            return $this->render('kursplan', [ 'kursplan' => $query, 'events' => $events]);
 //
 //        return $this->render('kursplan', ['kursplan' => $query]);
     }
