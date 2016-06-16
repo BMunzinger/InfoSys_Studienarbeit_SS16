@@ -32,9 +32,9 @@ phpunit.phar
 /backend/config/main-local.php
 /backend/runtime/debug/index.data
 /backend/runtime/logs/app.log
-/backend/runtime
+backend/runtime
 /frontend/config/main-local.php 
 /frontend/runtime/debug/index.data
 /frontend/runtime/logs/app.log
-/frontend/runtime
+frontend/runtime
 

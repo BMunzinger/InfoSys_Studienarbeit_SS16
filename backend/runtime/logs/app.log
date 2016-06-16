@@ -17167,3 +17167,2917 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1465222688.784
     'REQUEST_TIME' => 1465222688
 ]
+2016-06-09 13:57:19 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Controller.php:110
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#5 {main}
+2016-06-09 13:57:18 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][info][application] $_POST = [
+    'submit' => 'Upload Image'
+]
+
+$_FILES = [
+    'fileToUpload' => [
+        'name' => 'Prof.-Dr.-Nils-Schulenburg-ist-Dozent-an-der-FOM-in-Bremen.jpg'
+        'type' => 'image/jpeg'
+        'tmp_name' => '/tmp/phphrCckl'
+        'error' => 0
+        'size' => 1116916
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1117265'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryl5YRct3ziJY6PvUr'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60502'
+    'REDIRECT_URL' => '/upload.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/upload.php'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465480638.863
+    'REQUEST_TIME' => 1465480638
+]
+2016-06-09 13:58:02 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Controller.php:110
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#5 {main}
+2016-06-09 13:58:02 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    'submit' => 'Upload Image'
+]
+
+$_FILES = [
+    'fileToUpload' => [
+        'name' => 'iStock_000016165104XSmall.jpg'
+        'type' => 'image/jpeg'
+        'tmp_name' => '/tmp/phpfy9Vw2'
+        'error' => 0
+        'size' => 8498
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8814'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryJBLUDb9mcvdAOMh4'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60532'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465480682.654
+    'REQUEST_TIME' => 1465480682
+]
+2016-06-09 14:12:49 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Dozent::file' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(247): yii\base\Component->__get('file')
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/helpers/BaseHtml.php(2051): yii\db\BaseActiveRecord->__get('file')
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/helpers/BaseHtml.php(1226): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\Dozent), 'file')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/helpers/BaseHtml.php(1340): yii\helpers\BaseHtml::activeInput('file', Object(common\models\Dozent), 'file', Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(432): yii\helpers\BaseHtml::activeFileInput(Object(common\models\Dozent), 'file', Array)
+#5 /mnt/hgfs/yii2/backend/views/site/edit.php(43): yii\widgets\ActiveField->fileInput()
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(325): require('/mnt/hgfs/yii2/...')
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/mnt/hgfs/yii2/...', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/mnt/hgfs/yii2/...', Array, Object(backend\controllers\SiteController))
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('edit', Array, Object(backend\controllers\SiteController))
+#10 /mnt/hgfs/yii2/backend/controllers/SiteController.php(149): yii\base\Controller->render('edit', Array)
+#11 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#12 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#15 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#16 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#18 {main}
+2016-06-09 14:12:49 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60556'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465481569.611
+    'REQUEST_TIME' => 1465481569
+]
+2016-06-09 14:16:54 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'backend\controllers\DozentPictureForm' not found' in /mnt/hgfs/yii2/backend/controllers/SiteController.php:135
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-06-09 14:16:53 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60570'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465481813.924
+    'REQUEST_TIME' => 1465481813
+]
+2016-06-09 14:17:29 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'backend\models\DozentPictureForm' in file: /mnt/hgfs/yii2/backend/models/DozentPictureForm.php. Namespace missing?' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\models\...')
+#1 /mnt/hgfs/yii2/backend/controllers/SiteController.php(136): spl_autoload_call('backend\models\...')
+#2 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#9 {main}
+2016-06-09 14:17:29 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60574'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465481849.025
+    'REQUEST_TIME' => 1465481849
+]
+2016-06-09 14:17:57 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'backend\models\DozentPictureForm' in file: /mnt/hgfs/yii2/backend/models/DozentPictureForm.php. Namespace missing?' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\models\...')
+#1 /mnt/hgfs/yii2/backend/controllers/SiteController.php(136): spl_autoload_call('backend\models\...')
+#2 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#9 {main}
+2016-06-09 14:17:57 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60578'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465481877.705
+    'REQUEST_TIME' => 1465481877
+]
+2016-06-09 14:20:45 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Dozent::file' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(247): yii\base\Component->__get('file')
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/helpers/BaseHtml.php(2051): yii\db\BaseActiveRecord->__get('file')
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/helpers/BaseHtml.php(1226): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\Dozent), 'file')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/helpers/BaseHtml.php(1340): yii\helpers\BaseHtml::activeInput('file', Object(common\models\Dozent), 'file', Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(432): yii\helpers\BaseHtml::activeFileInput(Object(common\models\Dozent), 'file', Array)
+#5 /mnt/hgfs/yii2/backend/views/site/edit.php(43): yii\widgets\ActiveField->fileInput()
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(325): require('/mnt/hgfs/yii2/...')
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/mnt/hgfs/yii2/...', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/mnt/hgfs/yii2/...', Array, Object(backend\controllers\SiteController))
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('edit', Array, Object(backend\controllers\SiteController))
+#10 /mnt/hgfs/yii2/backend/controllers/SiteController.php(165): yii\base\Controller->render('edit', Array)
+#11 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#12 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#15 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#16 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#18 {main}
+2016-06-09 14:20:45 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60582'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465482045.098
+    'REQUEST_TIME' => 1465482045
+]
+2016-06-09 14:21:41 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Dozent::file' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(247): yii\base\Component->__get('file')
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/helpers/BaseHtml.php(2051): yii\db\BaseActiveRecord->__get('file')
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/helpers/BaseHtml.php(1226): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\Dozent), 'file')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/helpers/BaseHtml.php(1340): yii\helpers\BaseHtml::activeInput('file', Object(common\models\Dozent), 'file', Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(432): yii\helpers\BaseHtml::activeFileInput(Object(common\models\Dozent), 'file', Array)
+#5 /mnt/hgfs/yii2/backend/views/site/edit.php(43): yii\widgets\ActiveField->fileInput()
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(325): require('/mnt/hgfs/yii2/...')
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/mnt/hgfs/yii2/...', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/mnt/hgfs/yii2/...', Array, Object(backend\controllers\SiteController))
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('edit', Array, Object(backend\controllers\SiteController))
+#10 /mnt/hgfs/yii2/backend/controllers/SiteController.php(165): yii\base\Controller->render('edit', Array)
+#11 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#12 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#15 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#16 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#18 {main}
+2016-06-09 14:21:41 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fdozent'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60596'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465482101.327
+    'REQUEST_TIME' => 1465482101
+]
+2016-06-09 14:22:28 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: modelPicture' in /mnt/hgfs/yii2/backend/views/site/edit.php:43
+Stack trace:
+#0 /mnt/hgfs/yii2/backend/views/site/edit.php(43): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/yii2/...', 43, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(325): require('/mnt/hgfs/yii2/...')
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/mnt/hgfs/yii2/...', Array)
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/mnt/hgfs/yii2/...', Array, Object(backend\controllers\SiteController))
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('edit', Array, Object(backend\controllers\SiteController))
+#5 /mnt/hgfs/yii2/backend/controllers/SiteController.php(165): yii\base\Controller->render('edit', Array)
+#6 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#10 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#11 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#13 {main}
+2016-06-09 14:22:28 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fdozent'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60604'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465482148.079
+    'REQUEST_TIME' => 1465482148
+]
+2016-06-09 14:25:13 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The table does not exist: {{%dozent_picture_form}}' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php:299
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php(330): yii\db\ActiveRecord::getTableSchema()
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(422): yii\db\ActiveRecord->attributes()
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(241): yii\db\BaseActiveRecord->hasAttribute('Picture')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/helpers/BaseHtml.php(2051): yii\db\BaseActiveRecord->__get('Picture')
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/helpers/BaseHtml.php(1226): yii\helpers\BaseHtml::getAttributeValue(Object(backend\models\DozentPictureForm), 'Picture')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/helpers/BaseHtml.php(1340): yii\helpers\BaseHtml::activeInput('file', Object(backend\models\DozentPictureForm), 'Picture', Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(432): yii\helpers\BaseHtml::activeFileInput(Object(backend\models\DozentPictureForm), 'Picture', Array)
+#7 /mnt/hgfs/yii2/backend/views/site/edit.php(43): yii\widgets\ActiveField->fileInput()
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(325): require('/mnt/hgfs/yii2/...')
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/mnt/hgfs/yii2/...', Array)
+#10 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/mnt/hgfs/yii2/...', Array, Object(backend\controllers\SiteController))
+#11 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('edit', Array, Object(backend\controllers\SiteController))
+#12 /mnt/hgfs/yii2/backend/controllers/SiteController.php(165): yii\base\Controller->render('edit', Array)
+#13 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#14 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#17 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#18 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#20 {main}
+2016-06-09 14:25:13 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fdozent'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60644'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465482313.668
+    'REQUEST_TIME' => 1465482313
+]
+2016-06-09 14:35:54 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: data' in /mnt/hgfs/yii2/backend/controllers/SiteController.php:154
+Stack trace:
+#0 /mnt/hgfs/yii2/backend/controllers/SiteController.php(154): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/yii2/...', 154, Array)
+#1 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-06-09 14:35:54 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60770'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465482954.129
+    'REQUEST_TIME' => 1465482954
+]
+2016-06-09 14:36:18 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '}', expecting ',' or ';'' in /mnt/hgfs/yii2/backend/controllers/SiteController.php:155
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-06-09 14:36:18 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60774'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465482978.074
+    'REQUEST_TIME' => 1465482978
+]
+2016-06-09 14:37:01 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant console - assumed 'console'' in /mnt/hgfs/yii2/backend/controllers/SiteController.php:155
+Stack trace:
+#0 /mnt/hgfs/yii2/backend/controllers/SiteController.php(155): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/mnt/hgfs/yii2/...', 155, Array)
+#1 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-06-09 14:37:01 [127.0.0.1][1][69hrs9u58fv1pippgr1ncle0s6][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '69hrs9u58fv1pippgr1ncle0s6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=69hrs9u58fv1pippgr1ncle0s6'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60800'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465483021.881
+    'REQUEST_TIME' => 1465483021
+]
+2016-06-10 08:21:14 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The table does not exist: {{%dozent_picture_form}}' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php:299
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php(330): yii\db\ActiveRecord::getTableSchema()
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(422): yii\db\ActiveRecord->attributes()
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(264): yii\db\BaseActiveRecord->hasAttribute('file')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(147): yii\db\BaseActiveRecord->__set('file', NULL)
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 08:21:13 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'd0NiVzh0engiNScTXEMdNyEbEnpXLBY1MAYHJgpHHig0KTAnSjwLGg=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'iStock_000016165104XSmall.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpefx2A6'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 8498
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8984'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryyCIaT3JPTWbw0Fzr'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60968'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465546873.972
+    'REQUEST_TIME' => 1465546873
+]
+2016-06-10 08:24:53 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The table does not exist: {{%dozent_picture_form}}' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php:299
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php(330): yii\db\ActiveRecord::getTableSchema()
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(422): yii\db\ActiveRecord->attributes()
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(264): yii\db\BaseActiveRecord->hasAttribute('file')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(147): yii\db\BaseActiveRecord->__set('file', NULL)
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 08:24:53 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'VXpJalVBeFEADAwuMXYfHgMiOUc6GRQcEj8sG2dyHAEWEBsaJwkJMw=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'iStock_000016165104XSmall.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpOx4olC'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 8498
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8984'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarypLeJwm6Pb70uhdzg'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60982'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465547093.638
+    'REQUEST_TIME' => 1465547093
+]
+2016-06-10 08:28:29 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'move_uploaded_file(uploads/iStock_000016165104XSmall.jpg): failed to open stream: No such file or directory' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/mnt/hgfs/yii2/...', 161, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php(161): move_uploaded_file('/tmp/phpMIkpEY', 'uploads/iStock_...')
+#2 /mnt/hgfs/yii2/backend/controllers/SiteController.php(149): yii\web\UploadedFile->saveAs('uploads/iStock_...')
+#3 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#10 {main}
+2016-06-10 08:28:29 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'OURqRW5Uc3RsMi8BCmMUO28cGmgBDB85fgEPNFxnFyR6Ljg1HBwCFg=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'iStock_000016165104XSmall.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpMIkpEY'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 8498
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8984'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary3fqHxPeIk34zISlN'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '60998'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465547309.376
+    'REQUEST_TIME' => 1465547309
+]
+2016-06-10 08:30:09 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The table does not exist: {{%dozent_picture_form}}' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php:299
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php(330): yii\db\ActiveRecord::getTableSchema()
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(422): yii\db\ActiveRecord->attributes()
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(241): yii\db\BaseActiveRecord->hasAttribute('file')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(149): yii\db\BaseActiveRecord->__get('file')
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 08:30:09 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'Y0RsZDVLVHo2MikgUXwzNTUcHElaEzg3JAEJFQd4MCogLj4URwMlGA=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'iStock_000016165104XSmall.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpM5OV3P'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 8498
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8984'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryzBlu07T9nO90xl8A'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '32778'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465547409.027
+    'REQUEST_TIME' => 1465547409
+]
+2016-06-10 08:31:20 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'move_uploaded_file(backend/uploads/iStock_000016165104XSmall.jpg): failed to open stream: No such file or directory' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/mnt/hgfs/yii2/...', 161, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php(161): move_uploaded_file('/tmp/phpFZfRpi', 'backend/uploads...')
+#2 /mnt/hgfs/yii2/backend/controllers/SiteController.php(149): yii\web\UploadedFile->saveAs('backend/uploads...')
+#3 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#10 {main}
+2016-06-10 08:31:20 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'VEMwNWEyV2EBNXVxBQUwLgIbQBgOajssEwZVRFMBMzEXKWJFE3omAw=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'iStock_000016165104XSmall.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpFZfRpi'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 8498
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8984'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryJDNHfLa7foODP14Q'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '32792'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465547480.38
+    'REQUEST_TIME' => 1465547480
+]
+2016-06-10 09:10:44 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'move_uploaded_file(uploads/iStock_000016165104XSmall.jpg): failed to open stream: No such file or directory' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/mnt/hgfs/yii2/...', 161, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php(161): move_uploaded_file('/tmp/phpM2Dirf', 'uploads/iStock_...')
+#2 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(21): yii\web\UploadedFile->saveAs('uploads/iStock_...')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload()
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 09:10:44 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'RW1xeWUzTXcQGzQ9AQQqOBM1AVQKayE6AigUCFcAKScGByMJF3s8FQ=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'iStock_000016165104XSmall.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpM2Dirf'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 8498
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8984'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryC1RD1cyvbmZ5YBZ4'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '32888'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465549844.607
+    'REQUEST_TIME' => 1465549844
+]
+2016-06-10 09:13:31 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'backend\controllers\SiteController' in file: /mnt/hgfs/yii2/backend/controllers/SiteController.php. Namespace missing?' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\control...')
+#1 [internal function]: spl_autoload_call('backend\control...')
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(562): class_exists('backend\control...')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(520): yii\base\Module->createControllerByID('site')
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-06-10 09:13:31 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '32898'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465550011.519
+    'REQUEST_TIME' => 1465550011
+]
+2016-06-10 09:13:31 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'backend\controllers\SiteController' in file: /mnt/hgfs/yii2/backend/controllers/SiteController.php. Namespace missing?' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\control...')
+#1 [internal function]: spl_autoload_call('backend\control...')
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(562): class_exists('backend\control...')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(520): yii\base\Module->createControllerByID('site')
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-06-10 09:13:31 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '32900'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465550011.661
+    'REQUEST_TIME' => 1465550011
+]
+2016-06-10 09:13:53 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'move_uploaded_file(uploads/Prof.-Dr.-Nils-Schulenburg-ist-Dozent-an-der-FOM-in-Bremen.jpg): failed to open stream: No such file or directory' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/mnt/hgfs/yii2/...', 161, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php(161): move_uploaded_file('/tmp/phpdJc3MD', 'uploads/Prof.-D...')
+#2 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(21): yii\web\UploadedFile->saveAs('uploads/Prof.-D...')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload()
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 09:13:53 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'bnF0TkIxLjU7BzEKJgZJejgpBGMtaUJ4KTQRP3ACSmUtGyY.MHlfVw=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'Prof.-Dr.-Nils-Schulenburg-ist-Dozent-an-der-FOM-in-Bremen.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpdJc3MD'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 1116916
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1117435'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryhCEJvHRXJ0OrS38Q'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '32918'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465550033.512
+    'REQUEST_TIME' => 1465550033
+]
+2016-06-10 09:29:20 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'move_uploaded_file(uploads/Prof.-Dr.-Nils-Schulenburg-ist-Dozent-an-der-FOM-in-Bremen.jpg): failed to open stream: No such file or directory' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/mnt/hgfs/yii2/...', 161, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php(161): move_uploaded_file('/tmp/phpMN6JBl', 'uploads/Prof.-D...')
+#2 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(21): yii\web\UploadedFile->saveAs('uploads/Prof.-D...')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload()
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 09:29:20 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'bnF0TkIxLjU7BzEKJgZJejgpBGMtaUJ4KTQRP3ACSmUtGyY.MHlfVw=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'Prof.-Dr.-Nils-Schulenburg-ist-Dozent-an-der-FOM-in-Bremen.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpMN6JBl'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 1116916
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1117435'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryhCEJvHRXJ0OrS38Q'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '32926'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465550960.764
+    'REQUEST_TIME' => 1465550960
+]
+2016-06-10 09:29:36 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'move_uploaded_file(uploads/iStock_000016165104XSmall.jpg): failed to open stream: No such file or directory' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/mnt/hgfs/yii2/...', 161, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php(161): move_uploaded_file('/tmp/php4ENkco', 'uploads/iStock_...')
+#2 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(21): yii\web\UploadedFile->saveAs('uploads/iStock_...')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload()
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 09:29:36 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'Z0VvbE1iVE8yMyooKVUzADEdH0EiOjgCIAAKHX9RMB8kLz0cPyolLQ=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'iStock_000016165104XSmall.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/php4ENkco'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 8498
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8984'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryasOwGjX8lmue19dW'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '32942'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465550976.555
+    'REQUEST_TIME' => 1465550976
+]
+2016-06-10 09:35:17 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'move_uploaded_file(uploads/iStock_000016165104XSmall.jpg): failed to open stream: No such file or directory' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/mnt/hgfs/yii2/...', 161, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php(161): move_uploaded_file('/tmp/phpIYY752', 'uploads/iStock_...')
+#2 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(21): yii\web\UploadedFile->saveAs('uploads/iStock_...')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload()
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 09:35:17 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'NnEtRVRmalJjB2gBMFENHWApXWg7PgYfcTRINGZVDgJ1G381Ji4bMA=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'iStock_000016165104XSmall.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpIYY752'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 8498
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8984'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarybUTAJDE5zV1IZpI1'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '32956'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465551317.026
+    'REQUEST_TIME' => 1465551317
+]
+2016-06-10 09:44:08 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'move_uploaded_file(uploads/iStock_000016165104XSmall.jpg): failed to open stream: No such file or directory' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/mnt/hgfs/yii2/...', 161, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php(161): move_uploaded_file('/tmp/phpqXM5OQ', 'uploads/iStock_...')
+#2 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(22): yii\web\UploadedFile->saveAs('uploads/iStock_...')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload()
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 09:44:08 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'UF95R0VTSHEFKTwDIWQvPgYHCWoqCyQ8FxocNndgLCETNSs3Nxs5Ew=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'iStock_000016165104XSmall.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpqXM5OQ'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 8498
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8984'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryxoVVhSg1TQs5KpgJ'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '33004'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465551848.058
+    'REQUEST_TIME' => 1465551848
+]
+2016-06-10 09:46:40 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'move_uploaded_file(/home/dave/test/iStock_000016165104XSmall.jpg): failed to open stream: Permission denied' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/mnt/hgfs/yii2/...', 161, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php(161): move_uploaded_file('/tmp/phpliNaIR', '/home/dave/test...')
+#2 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(22): yii\web\UploadedFile->saveAs('/home/dave/test...')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload()
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 09:46:40 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'UF95R0VTSHEFKTwDIWQvPgYHCWoqCyQ8FxocNndgLCETNSs3Nxs5Ew=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'iStock_000016165104XSmall.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpliNaIR'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 8498
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8984'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryxoVVhSg1TQs5KpgJ'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '33006'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465552000.403
+    'REQUEST_TIME' => 1465552000
+]
+2016-06-10 09:47:03 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'move_uploaded_file(/tmp/test/iStock_000016165104XSmall.jpg): failed to open stream: No such file or directory' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/mnt/hgfs/yii2/...', 161, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php(161): move_uploaded_file('/tmp/phpWPWn65', '/tmp/test/iStoc...')
+#2 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(22): yii\web\UploadedFile->saveAs('/tmp/test/iStoc...')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload()
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 09:47:03 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'UF95R0VTSHEFKTwDIWQvPgYHCWoqCyQ8FxocNndgLCETNSs3Nxs5Ew=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'iStock_000016165104XSmall.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpWPWn65'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 8498
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8984'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryxoVVhSg1TQs5KpgJ'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '33008'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465552023.44
+    'REQUEST_TIME' => 1465552023
+]
+2016-06-10 09:48:25 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'move_uploaded_file(backend/uploads/iStock_000016165104XSmall.jpg): failed to open stream: No such file or directory' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/mnt/hgfs/yii2/...', 161, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php(161): move_uploaded_file('/tmp/phpPFmdWI', 'backend/uploads...')
+#2 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(22): yii\web\UploadedFile->saveAs('backend/uploads...')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload()
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 09:48:25 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'd2NudnpHMGoiFSsyHnBXJSE7HlsVH1wnMCYLB0h0VDo0CTwGCA9BCA=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'iStock_000016165104XSmall.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpPFmdWI'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 8498
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '8984'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryYQl23QS4w4Id5o1X'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '33026'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465552105.115
+    'REQUEST_TIME' => 1465552105
+]
+2016-06-10 10:08:48 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Creating default object from empty value' in /mnt/hgfs/yii2/backend/models/DozentPictureForm.php:23
+Stack trace:
+#0 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(23): yii\base\ErrorHandler->handleError(2, 'Creating defaul...', '/mnt/hgfs/yii2/...', 23, Array)
+#1 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload()
+#2 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#9 {main}
+2016-06-10 10:08:48 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'X0F3cDlBSTIKNzI0XXYufQkZB11WGSV/GAQSAQtyLWIcKyUASwk4UA=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'Prof.-Dr.-Nils-Schulenburg-ist-Dozent-an-der-FOM-in-Bremen.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/php7ep93s'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 1116916
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1117435'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryL3AKYz1MUr5XBgYZ'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '33080'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465553328.419
+    'REQUEST_TIME' => 1465553328
+]
+2016-06-10 10:11:36 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Creating default object from empty value' in /mnt/hgfs/yii2/backend/models/DozentPictureForm.php:23
+Stack trace:
+#0 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(23): yii\base\ErrorHandler->handleError(2, 'Creating defaul...', '/mnt/hgfs/yii2/...', 23, Array)
+#1 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload()
+#2 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#9 {main}
+2016-06-10 10:11:35 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'X0F3cDlBSTIKNzI0XXYufQkZB11WGSV/GAQSAQtyLWIcKyUASwk4UA=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'Prof.-Dr.-Nils-Schulenburg-ist-Dozent-an-der-FOM-in-Bremen.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpzzhpxu'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 1116916
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1117435'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryL3AKYz1MUr5XBgYZ'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '33082'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465553495.954
+    'REQUEST_TIME' => 1465553495
+]
+2016-06-10 10:11:47 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Creating default object from empty value' in /mnt/hgfs/yii2/backend/models/DozentPictureForm.php:23
+Stack trace:
+#0 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(23): yii\base\ErrorHandler->handleError(2, 'Creating defaul...', '/mnt/hgfs/yii2/...', 23, Array)
+#1 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload()
+#2 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#9 {main}
+2016-06-10 10:11:47 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'X3dkY2NuR1IKASEnB1kgHQkvFE4MNisfGDIBElFdIwIcHTYTESY2MA=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'Prof.-Dr.-Nils-Schulenburg-ist-Dozent-an-der-FOM-in-Bremen.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phptPcw5a'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 1116916
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1117435'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryuCo1od018eTz3tkd'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '33088'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465553507.471
+    'REQUEST_TIME' => 1465553507
+]
+2016-06-10 10:12:30 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Creating default object from empty value' in /mnt/hgfs/yii2/backend/models/DozentPictureForm.php:23
+Stack trace:
+#0 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(23): yii\base\ErrorHandler->handleError(2, 'Creating defaul...', '/mnt/hgfs/yii2/...', 23, Array)
+#1 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload(Object(common\models\Dozent))
+#2 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#9 {main}
+2016-06-10 10:12:30 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'UmFTTElIXy4HFxYILX84YQQ5I2EmEDNjFSQ2PXt7O34RCwE8OwAuTA=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'Prof.-Dr.-Nils-Schulenburg-ist-Dozent-an-der-FOM-in-Bremen.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpFsWytZ'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 1116916
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1117435'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryA9QfyzkBOcul4NVs'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '33102'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465553550.799
+    'REQUEST_TIME' => 1465553550
+]
+2016-06-10 10:26:58 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Dozent::file_path' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(247): yii\base\Component->__get('file_path')
+#1 /mnt/hgfs/yii2/backend/views/site/edit.php(62): yii\db\BaseActiveRecord->__get('file_path')
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(325): require('/mnt/hgfs/yii2/...')
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/mnt/hgfs/yii2/...', Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/mnt/hgfs/yii2/...', Array, Object(backend\controllers\SiteController))
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('edit', Array, Object(backend\controllers\SiteController))
+#6 /mnt/hgfs/yii2/backend/controllers/SiteController.php(165): yii\base\Controller->render('edit', Array)
+#7 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#11 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#12 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#14 {main}
+2016-06-10 10:26:58 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '33274'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465554418.604
+    'REQUEST_TIME' => 1465554418
+]
+2016-06-10 10:41:48 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'move_uploaded_file(/common/web/dozentPictures/Prof.-Dr.-Nils-Schulenburg-ist-Dozent-an-der-FOM-in-Bremen.jpg): failed to open stream: No such file or directory' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/mnt/hgfs/yii2/...', 161, Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/UploadedFile.php(161): move_uploaded_file('/tmp/phpzBF9gW', '/common/web/doz...')
+#2 /mnt/hgfs/yii2/backend/models/DozentPictureForm.php(22): yii\web\UploadedFile->saveAs('/common/web/doz...')
+#3 /mnt/hgfs/yii2/backend/controllers/SiteController.php(148): backend\models\DozentPictureForm->upload(Object(common\models\Dozent))
+#4 [internal function]: backend\controllers\SiteController->actionEdit('1')
+#5 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('edit', Array)
+#8 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/edit', Array)
+#9 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-10 10:41:48 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'UFpGdEFIbVcFLAMwJX8KGAYCNlkuEAEaFx8jBXN7CQcTMBQEMwAcNQ=='
+    'DozentPictureForm' => [
+        'picture' => ''
+    ]
+]
+
+$_FILES = [
+    'DozentPictureForm' => [
+        'name' => [
+            'picture' => 'Prof.-Dr.-Nils-Schulenburg-ist-Dozent-an-der-FOM-in-Bremen.jpg'
+        ]
+        'type' => [
+            'picture' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'picture' => '/tmp/phpzBF9gW'
+        ]
+        'error' => [
+            'picture' => 0
+        ]
+        'size' => [
+            'picture' => 1116916
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1117435'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://back.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryEqDc1UT2ivOJvAdA'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fedit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '33558'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465555308.418
+    'REQUEST_TIME' => 1465555308
+]
+2016-06-10 10:46:40 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Html' not found' in /mnt/hgfs/yii2/backend/views/site/edit.php:63
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-06-10 10:46:40 [127.0.0.1][1][2lbscd8u9mp87qe1ab2t36ks13][info][application] $_GET = [
+    'r' => 'site/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb\";}'
+    '_identity' => '0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM\",2592000]\";}'
+    'PHPSESSID' => '2lbscd8u9mp87qe1ab2t36ks13'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/50.0.2661.102 Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Fdozent'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a781e258df0fc6340104941d6563eea5dce44b4163a0d0e084a2b1576ba35efea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UvEDd7gOVXp-oXlMGEeq23dPCjRprHqb%22%3B%7D; _identity=0be0b382be303a3a53c31e789e2c961b11e6951cc3354dc36c7a8be53dfeb63aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22k7ybZhGWe0Wd82LptSSYPAGTqN5jNrBM%22%2C2592000%5D%22%3B%7D; PHPSESSID=2lbscd8u9mp87qe1ab2t36ks13'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '33588'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fedit&id=1'
+    'REQUEST_URI' => '/index.php?r=site%2Fedit&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465555600.768
+    'REQUEST_TIME' => 1465555600
+]
