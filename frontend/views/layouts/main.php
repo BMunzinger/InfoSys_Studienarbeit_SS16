@@ -1,5 +1,4 @@
 <?php
-
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -15,26 +14,26 @@ AppAsset::register($this);
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
-<head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
-</head>
-<body>
-<?php $this->beginBody() ?>
+    <head>
+        <meta charset="<?= Yii::$app->charset ?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <?= Html::csrfMetaTags() ?>
+        <title><?= Html::encode($this->title) ?></title>
+        <?php $this->head() ?>
+    </head>
+    <body>
+        <?php $this->beginBody() ?>
 
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => '<img src="logo.png" height="40px" style="margin-top: -10px;"/>',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    
+        <div class="wrap">
+            <?php
+            NavBar::begin([
+                'brandLabel' => '<img src="logo.png" height="40px" style="margin-top: -10px;"/>',
+                'brandUrl' => Yii::$app->homeUrl,
+                'options' => [
+                    'class' => 'navbar-inverse navbar-fixed-top',
+                ],
+            ]);
+
 //    $menuItems = [
 //        ['label'=>'Home', 'url' => ['/site/index']],
 //        ['label' => 'Back', 'url' => Yii::$app->request->referrer],
@@ -44,63 +43,64 @@ AppAsset::register($this);
 //        'items' => $menuItems,
 //        
 //    ]); 
-    echo Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) 
-    ?>
-    
-        
-    <?php 
-    setlocale(LC_ALL, "de_DE.utf8");
-    $glock = [
-        ['label' => strftime('%A')
-            .', der '
-            .date('d.m.Y H:i')
-            .' Uhr.']
-    ];
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right clock'],
-        'items' => ['label' => ''],
- 
-      
-    ]);
-    NavBar::end();
-    ?>
+            echo Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ])
+            ?>
 
-    <div class="container">
-        
-        
-        <?= $content ?>
-    </div>
-</div>
+
+            <?php
+            setlocale(LC_ALL, "de_DE.utf8");
+            $glock = [
+                ['label' => strftime('%A')
+                    . ', der '
+                    . date('d.m.Y H:i')
+                    . ' Uhr.']
+            ];
+            echo Nav::widget([
+                'options' => ['class' => 'navbar-nav navbar-right clock'],
+                'items' => ['label' => ''],
+            ]);
+            NavBar::end();
+            ?>
+
+            <div class="container">
+
+
+<?= $content ?>
+            </div>
+        </div>
 
 <?php $this->endBody() ?>
-    
-    <footer class="footer">
-    <div class="container">
-         <marquee direction="left" class="newsTicker">www.eKiwi.de</marquee>   
-    </div>
-</footer>
-   
-</body>
+
+        <footer class="footer">
+            <div class="container">
+                <marquee direction="left" class="newsTicker">www.eKiwi.de</marquee>   
+            </div>
+        </footer>
+
+    </body>
 
 
-<style>
-    .footer{
-        background-color: #222222;
-    }
-    .newsTicker{
-        margin: 0;
-        padding: 0;
-        color: #ffffff;
-        font-size: 15px;
-    }
-    .clock{
-        font-size: 20px;
-        margin-top: 10px;
-        color: #ffffff;
-    }
-</style>
+    <style>
+        .footer{
+            background-color: #222222;
+            bottom: 0;
+            width: 100%;
+            position: fixed;
+        }
+        .newsTicker{
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            font-size: 15px;
+        }
+        .clock{
+            font-size: 20px;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+    </style>
 
 </html>
 <?php $this->endPage() ?>
