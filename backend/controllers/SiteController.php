@@ -32,7 +32,7 @@ class SiteController extends Controller {
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'dozent', 'innovations', 'news', 'smsmessage', 'tickermessages', 'timetable', 'usergroups', 'vvs', 'edit'],
+                        'actions' => ['logout', 'index', 'dozent', 'news', 'smsmessage', 'tickermessages', 'timetable', 'usergroups', 'vvs', 'edit'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -92,10 +92,6 @@ class SiteController extends Controller {
         $query = Dozent::find()->all();
 
         return $this->render('dozent', ['dozents' => $query]);
-    }
-
-    public function actionInnovations() {
-        return $this->render('innovations');
     }
 
     public function actionNews() {
