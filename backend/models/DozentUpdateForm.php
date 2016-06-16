@@ -20,28 +20,13 @@ class DozentUpdateForm extends Model {
     public $picture;
     public $email;
     
-    public $fächer = [];
-    public $funktionen = [];
-    public $thesen = [];
-    public $praktika = [];
-    public $studienarbeiten = [];
-    
     /**
      * @inheritdoc
      */
     public function rules() {
         return [
             // name, email, subject and body are required
-            [['name', 'vorname'], 'required'],
-        ];
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function attributeLabels() {
-        return [
-            'verifyCode' => 'Verification Code',
+            [['name', 'vorname', 'titel', 'position', 'sprechzeiten', 'raum', 'telefon', 'email'], 'required'],
         ];
     }
 
@@ -60,6 +45,12 @@ class DozentUpdateForm extends Model {
         if ($this->validate()) {
             $model->Name = $this->name;
             $model->Vorname = $this->vorname;
+            $model->Titel = $this->titel;
+            $model->Position = $this->position;
+            $model->Sprechzeiten = $this->sprechzeiten;
+            $model->Raum = $this->raum;
+            $model->Telefon = $this->telefon;
+            $model->Email = $this->email;
             $model->update();
 
             return true;

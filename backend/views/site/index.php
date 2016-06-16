@@ -9,7 +9,7 @@ $this->title = 'InfoSys - Administration';
         <div style="width:100%" class="thumbnail tile tile-wide tile-blue">
             <a href="#" >
                 <h1 class="tile-text">
-                    I'm the 2!</h1>
+                    Test!</h1>
             </a>
         </div>
     </div>
