@@ -3,6 +3,7 @@ $this->title = 'News';
 $this->params['breadcrumbs'][] = ['label' => 'Overview', 'url' => ['tiles']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<h1>News</h1>
 <div class="site-news">
  <?php
     $rss = new DOMDocument();

@@ -1,9 +1,12 @@
 <?php
 $this->title = 'VVS';
 $this->params['breadcrumbs'][] = $this->title;
-use yii\helpers\Html;
 
-foreach ($items as $item) {
+use yii\helpers\Html;
+?>
+
+<h1>Fahrpläne</h1>
+<?php foreach ($items as $item) {
     ?>
     <div class="col-md-4">
         <?=

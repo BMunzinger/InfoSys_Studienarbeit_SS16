@@ -277,7 +277,7 @@ class SiteController extends Controller {
             }
             $event = new \common\models\Event();
             $event->id = $e->ID;
-            $event->title = $e->fach['Name'] . "\r\n" . $e->Raum . " " . $e->dozent['Vorname'] . ' ' . $e->dozent['Name'];
+            $event->title = $e->fach['Name'] . "\r\n" . $e->Raum . " " . $e->dozent['Name'] . ' ' . $e->dozent['Vorname'];
             $event->start = $e->ZeitVon;
             $event->end = $e->ZeitBis;
             $event->dow = [$weekday];

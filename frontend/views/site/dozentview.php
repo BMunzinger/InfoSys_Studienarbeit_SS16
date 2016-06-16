@@ -9,7 +9,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     <div class="wrapperDozent">
         <h1><?= $dozent->Titel ?> <?= $dozent->Name ?>, <?= $dozent->Vorname ?></h1>
-        <h3><?= $dozent->Position ?></h3>
+        <!--<h3><?= $dozent->Position ?></h3>-->
         <hr/>
         <h2>Sprechzeiten: <?= $dozent->Sprechzeiten ?></h2>
         <h2>Raum: <?= $dozent->Raum ?></h2>
