@@ -67,11 +67,11 @@ AppAsset::register($this);
             <div class="container">
 
 
-<?= $content ?>
+                <?= $content ?>
             </div>
         </div>
 
-<?php $this->endBody() ?>
+        <?php $this->endBody() ?>
 
         <footer class="footer">
             <div class="container">
@@ -88,6 +88,7 @@ AppAsset::register($this);
             bottom: 0;
             width: 100%;
             position: fixed;
+            z-index: 1;
         }
         .newsTicker{
             margin: 0;
