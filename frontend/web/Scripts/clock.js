@@ -7,11 +7,12 @@ function updateClock ( )
 
   	// Pad the minutes and seconds with leading zeros, if required
   	currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
-  	currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+//  	currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
         currentHours = (currentHours < 10 ? "0" : "") + currentHours;
 
   	// Compose the string for display
-  	var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
+//  	var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
+        var currentTimeString = currentHours + ":" + currentMinutes;
   	
   	
    	$(".clock").html(currentTimeString);

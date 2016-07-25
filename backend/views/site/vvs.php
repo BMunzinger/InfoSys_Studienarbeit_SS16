@@ -5,5 +5,5 @@
 $this->title = 'VVS';
 ?>
 <div class="site-index">
-<h1>this is vvs!</h1>
+<h1>Fahrpläne</h1>
 </div>

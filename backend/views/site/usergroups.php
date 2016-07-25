@@ -5,5 +5,5 @@
 $this->title = 'Nutzergruppen';
 ?>
 <div class="site-index">
-<h1>this is usergroups!</h1>
+<h1>Nutzergruppe</h1>
 </div>

@@ -75,7 +75,7 @@ AppAsset::register($this);
 
         <footer class="footer">
             <div class="container">
-                <marquee direction="left" class="newsTicker">www.eKiwi.de</marquee>   
+                <marquee direction="left" class="newsTicker">Hitzefrei, alle Vorlesungen entfallen. *** Professor Schmidt ist am Mittwoch nicht im Haus, Sprechstunde entfällt</marquee>   
             </div>
         </footer>
 

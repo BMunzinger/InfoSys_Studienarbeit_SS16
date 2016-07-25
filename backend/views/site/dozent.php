@@ -25,7 +25,7 @@ $this->title = 'Dozent';
                 <td><?= $dozent->Name ?></td>
                 <td><?= $dozent->Vorname ?></td>
                 <td><?= $dozent->Position ?></td>
-                <td><?= Html::a('<span style="float: right;" class="btn-label">Show all</span>', ['edit', 'id' => $dozent->ID], ['class' => 'btn btn-primary']) ?></td>
+                <td><?= Html::a('<span style="float: right;" class="btn-label">Edit</span>', ['edit', 'id' => $dozent->ID], ['class' => 'btn btn-primary']) ?></td>
             </tr>
 
         <?php } ?>

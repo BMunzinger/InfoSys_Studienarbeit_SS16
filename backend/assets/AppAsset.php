@@ -21,12 +21,21 @@ class AppAsset extends AssetBundle {
     public $css = [
         'css/site.css',
         'dist/css/metro-bootstrap.css',
+        'Fullcalendar/fullcalendar.css',
+        'JQuery UI/jquery-ui.css',
     ];
     public $js = [
+        'JQuery UI/jquery-ui.js',
+        'Fullcalendar/lib/moment.min.js',
+        'Fullcalendar/fullcalendar.js',
+        'Fullcalendar/lang-all.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
+    ];
+    public $jsOptions = [
+        'position' => \yii\web\View::POS_HEAD
     ];
 
 }

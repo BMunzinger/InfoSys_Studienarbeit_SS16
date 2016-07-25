@@ -5,5 +5,5 @@
 $this->title = 'Tickermeldungen';
 ?>
 <div class="site-index">
-<h1>this is this is tickermessages!</h1>
+<h1>Tickermeldungen</h1>
 </div>

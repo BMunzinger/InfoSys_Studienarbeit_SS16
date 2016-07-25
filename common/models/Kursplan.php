@@ -20,4 +20,6 @@ class Kursplan extends ActiveRecord {
         return $this->hasOne(Fach::className(), ['ID' => 'Fach']);
     }
 
+    
+
 }
