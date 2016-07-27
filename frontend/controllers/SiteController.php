@@ -241,7 +241,7 @@ class SiteController extends Controller {
 
     public function actionTiles() {
         //console.log("actionTiles");
-        $model = Menu_item::find()->all();
+        $model = Menu_item::find()->where(['backend_only' => 0])->all();
         if ($model === null) {
             throw new NotFoundHttpException;
         }
