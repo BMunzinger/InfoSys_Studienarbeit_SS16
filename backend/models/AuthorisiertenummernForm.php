@@ -12,37 +12,62 @@ class AuthorisiertenummernForm extends Model {
 
     public $name;
     public $nummer;
+    public $oldnumber;
+
+    /**
+     * @inheritdoc
+     */
+    public static function tableName() {
+        return 'authorisiertenummern';
+    }
+
     /**
      * @inheritdoc
      */
     public function rules() {
         return [
             // name, email, subject and body are required
-            [['name', 'nummer'], 'required'],
+            [['name', 'nummer', 'oldnumber'], 'required'],
         ];
     }
 
     /**
      * @inheritdoc
      */
-
-    /**
-     * Sends an email to the specified email address using the information collected by this model.
-     *
-     * @param  string  $email the target email address
-     * @return boolean whether the email was sent
-     */
-    public function update($model) {
-        //  var_dump($model);
-        //  var_dump($modelUpdate);
-        //  die();
-
+    public function update() {
 
         if ($this->validate()) {
-            $model->Name = $this->name;
-            $model->Vorname = $this->vorname;
-            $model->update();
 
+            $updateNumber = Authorisiertenummern::findOne($this->oldnumber);
+            $updateNumber->nummer = $this->nummer;
+            $updateNumber->name = $this->name;
+            $updateNumber->update();
+            
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function addNumber() {
+        if ($this->validate()) {
+            // var_dump($this); die();
+
+            $addNumber = new Authorisiertenummern();
+            $addNumber->name = $this->name;
+            $addNumber->nummer = $this->nummer;
+
+            $addNumber->save();
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function deleteNumber() {
+        if ($this->validate()) {
+            Authorisiertenummern::findOne($this->nummer)->delete();
             return true;
         } else {
             return false;

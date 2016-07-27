@@ -4,12 +4,14 @@ namespace backend\models;
 
 use Yii;
 use yii\base\Model;
+use common\models\Dozent;
 
 /**
  * ContactForm is the model behind the contact form.
  */
 class DozentUpdateForm extends Model {
 
+    public $id;
     public $name;
     public $vorname;
     public $titel;
@@ -19,14 +21,14 @@ class DozentUpdateForm extends Model {
     public $telefon;
     public $picture;
     public $email;
-    
+
     /**
      * @inheritdoc
      */
     public function rules() {
         return [
             // name, email, subject and body are required
-            [['name', 'vorname', 'titel', 'position', 'sprechzeiten', 'raum', 'telefon', 'email'], 'required'],
+            [['id', 'name', 'vorname', 'titel', 'position', 'sprechzeiten', 'raum', 'telefon', 'email'], 'required'],
         ];
     }
 
@@ -36,22 +38,19 @@ class DozentUpdateForm extends Model {
      * @param  string  $email the target email address
      * @return boolean whether the email was sent
      */
-    public function update($model) {
-        //  var_dump($model);
-        //  var_dump($modelUpdate);
-        //  die();
-
-
+    public function update() {
         if ($this->validate()) {
-            $model->Name = $this->name;
-            $model->Vorname = $this->vorname;
-            $model->Titel = $this->titel;
-            $model->Position = $this->position;
-            $model->Sprechzeiten = $this->sprechzeiten;
-            $model->Raum = $this->raum;
-            $model->Telefon = $this->telefon;
-            $model->Email = $this->email;
-            $model->update();
+            $dozent = Dozent::findOne($this->id);
+            
+            $dozent->Name = $this->name;
+            $dozent->Vorname = $this->vorname;
+            $dozent->Titel = $this->titel;
+            $dozent->Position = $this->position;
+            $dozent->Sprechzeiten = $this->sprechzeiten;
+            $dozent->Raum = $this->raum;
+            $dozent->Telefon = $this->telefon;
+            $dozent->Email = $this->email;
+            $dozent->update();
 
             return true;
         } else {
@@ -59,4 +58,30 @@ class DozentUpdateForm extends Model {
         }
     }
 
+    public function add() {
+        if ($this->validate()) { 
+            $newDozent = new Dozent();
+            $newDozent->Name = $this->name;
+            $newDozent->Vorname = $this->vorname;
+            $newDozent->Titel = $this->titel;
+            $newDozent->Position = $this->position;
+            $newDozent->Sprechzeiten = $this->sprechzeiten;
+            $newDozent->Raum = $this->raum;
+            $newDozent->Telefon = $this->telefon;
+            $newDozent->Email = $this->email;
+
+            $newDozent->save();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function delete() {
+        if (Dozent::findOne($this->id)->delete()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

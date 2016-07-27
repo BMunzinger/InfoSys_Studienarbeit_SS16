@@ -1,34 +1,34 @@
 <?php
-
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
-
 /* @var $this yii\web\View */
+
+use yii\bootstrap\ActiveForm;
+use backend\models\NewsrssUpdate;
 
 $this->title = 'News';
 ?>
 <div class="site-index">
-    <table class="table" style="width: 100%;">
-
-
-
-        <tr>
-            <th>URL</th>
-            <th></th>
-        </tr>
-        <?php $form = ActiveForm::begin(['id' => 'news-form']); ?>
-        <tr>
-            <td>
-               <input class="form-control" type="text" name="fname" value="*URL*"><br>
-            </td>
-            <td>
-                <button type="button" class="btn btn-success" aria-label="Edit">
-                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save
-                </button>
-            </td>
-        </tr>
-        <?php ActiveForm::end(); ?>
-    </table>
-
-
+    <?php foreach ($links as $link) { ?>
+        <div style="width: 100%">
+            <?php
+            $form = ActiveForm::begin(['id' => 'newsupdate', 'action' => ['newsupdate']]);
+            $newsRssUpdate = new NewsrssUpdate();
+            ?>
+            <div>
+                <span>
+                    <?= $form->field($newsRssUpdate, 'URL')->textInput(['value' => $link->URL])->label(false) ?>
+                </span>
+                <span>
+                    <button type="submit" method="post" name="editNews" value="editNews" class="btn btn-primary" aria-label="Edit">
+                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Speichern
+                    </button>
+                </span>
+                <?= $form->field($newsRssUpdate, 'id')->hiddenInput(['value' => $link->ID])->label(false) ?>
+                <?= $form->field($newsRssUpdate, 'Description')->hiddenInput(['value' => $link->Description])->label(false) ?>
+            </div>
+            <div style="clear: both;">
+                <?= $link->Description ?>
+            </div>
+            <?php ActiveForm::end(); ?>
+        </div>
+    <?php } ?>
 </div>

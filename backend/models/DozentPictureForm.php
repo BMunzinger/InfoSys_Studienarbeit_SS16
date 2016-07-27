@@ -4,9 +4,13 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\web\UploadedFile;
+use common\models\Dozent;
 
-class DozentPictureForm extends \yii\db\ActiveRecord {
+class DozentPictureForm extends Model {
 
+    /**
+     * @var UploadedFile
+     */
     public $picture;
 
     public function rules() {
@@ -15,16 +19,31 @@ class DozentPictureForm extends \yii\db\ActiveRecord {
         ];
     }
 
-    public function upload($model)
-    {
+    public function upload($id) {
         if ($this->validate()) {
-            //var_dump($this->picture); die();
-            $this->picture->saveAs('../../common/web/dozentPictures/' . $this->picture->baseName . '.' . $this->picture->extension);
-            $model->PicturePath = ($this->picture->baseName . '.' . $this->picture->extension);
-            $model->update();
+
+            //var_dump($this); die();
+           // $this->picture->saveAs('../../common/web/dozentPictures/' . $this->picture->baseName . '.' . $this->picture->extension);
+
+            $dozent = Dozent::findOne($id);
+          
+            $dozent->Picture = file_get_contents($this->picture->tempName);
+            $dozent->save();
+            
+         /*   $image->file = UploadedFile::getInstance($image, 'file');
+
+            if ($image->file) {
+                $user->image_blob = file_get_contents($image->file->tempName);
+                $user->save();
+            }
+
+*/
+            //$model->PicturePath = ($this->picture->baseName . '.' . $this->picture->extension);
+            //$model->update();
             return true;
         } else {
             return false;
         }
     }
+
 }

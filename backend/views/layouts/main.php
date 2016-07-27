@@ -37,12 +37,14 @@ AppAsset::register($this);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'Dozent', 'url' => ['/site/dozent']],
+            ['label' => 'Daily-News', 'url' => ['/site/dailys']],
             ['label' => 'News', 'url' => ['/site/news']],
             ['label' => 'SMS', 'url' => ['/site/smsmessage']],
             ['label' => 'Ticker', 'url' => ['/site/tickermessages']],
-            ['label' => 'Stundenpläne', 'url' => ['/site/timetableview']],
+            ['label' => 'Stundenpläne', 'url' => ['/site/timetable']],
             ['label' => 'Nutzergruppen', 'url' => ['/site/usergroups']],
             ['label' => 'VVS', 'url' => ['/site/vvs']],
+        ['label' => 'Test', 'url' => ['/site/test']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

@@ -49,8 +49,26 @@ $this->title = 'Edit';
             </button>
             <?php ActiveForm::end(); ?>
         </div>
+
     </div>
-    <div style="clear:both;"></div>
+    
+    <div style="clear:both;">
+        
+        <p>Test!</p>
+        <p>Test</p>
+        <p>Tes</p>
+        <p>Te</p>
+        <p>T</p>
+        
+       
+        <?= Html::img('../../../common/web/dozentPictures/chance_mann.png', ['alt'=>'some', 'class'=>'thing']);?> 
+        
+        <img src= '../../../common/web/dozentPictures/chance_mann.png'/>
+       
+        
+        
+        
+    </div>
 
 
 
