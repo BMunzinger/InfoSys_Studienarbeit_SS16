@@ -2,6 +2,11 @@
 
 /* @var $this yii\web\View */
 
+use yii\bootstrap\Modal;
+use yii\bootstrap\ActiveForm;
+use common\models\Kursplan;
+use yii\helpers\ArrayHelper;
+
 $this->title = 'Stundenspläne';
 ?>
 <div class="site-index">
@@ -14,7 +19,7 @@ foreach ($q as $t) {
         'toggleButton' => ['tag' => 'i', 'label' => 'Bearbeiten <i class="glyphicon glyphicon-pencil"></i>', 'id' => 'modal-' . $t->ID, 'style' => 'cursor: pointer'],
     ]);
 
-    ActiveForm::begin(['action' => ['updateevent']]);
+    $form = ActiveForm::begin(['action' => ['updateevent']]);
 
     $model = Kursplan::findOne($t->ID);
     echo $form->field($model, 'Dozent')

@@ -8,8 +8,11 @@ use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
 use common\models\Dozent;
+use common\models\Vvs;
+use backend\models\Vvsform;
 use backend\models\DozentUpdateForm;
 use backend\models\DozentPictureForm;
+use common\models\Kursplan;
 use backend\models\DozentPictureUpdateForm;
 use backend\models\Authorisiertenummern;
 use backend\models\AuthorisiertenummernForm;
@@ -32,30 +35,32 @@ class SiteController extends Controller {
      */
     public function behaviors() {
         return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['login', 'error'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index', 'dozent', 'news', 'newsupdate', 'timetable', 'usergroups', 'vvs',
-                            'tickermessages', 'addticker', 'editticker', 'deleteticker',
-                            'dailys', 'adddaily', 'deletedaily', 'editdaily',
-                            'smsmessage', 'addnumber', 'removenumber', 'editnumber',
-                            'newdozent', 'editdozent', 'editdozentpicture', 'removedozent'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
+        'access' => [
+        'class' => AccessControl::className(),
+        'rules' => [
+        [
+        'actions' => ['login', 'error'],
+        'allow' => true,
+        ],
+        [
+        'actions' => ['logout', 'index', 'dozent', 'news', 'newsupdate', 'usergroups',
+        'timetable', 'timetable', 'timetableview', 'updateevent', 'deleteevent',
+        'vvs', 'vvsadd', 'vvsupload', 'vvsedit', 'vvsdelete',
+        'tickermessages', 'addticker', 'editticker', 'deleteticker',
+        'dailys', 'adddaily', 'deletedaily', 'editdaily',
+        'smsmessage', 'addnumber', 'removenumber', 'editnumber',
+        'newdozent', 'editdozent', 'editdozentpicture', 'removedozent'],
+        'allow' => true,
+        'roles' => ['@'],
+        ],
+        ],
+        ],
+        'verbs' => [
+        'class' => VerbFilter::className(),
+        'actions' => [
+        'logout' => ['post'],
+        ],
+        ],
         ];
     }
 
@@ -100,171 +105,337 @@ class SiteController extends Controller {
      *
      * @return mixed
      */
-    
-
     public function actionDailys() {
         $query = Newsdaily::find()->orderBy('day')->all();
-        
+
         return $this->render('dailys', ['messages' => $query]);
     }
-    
+
     public function actionAdddaily() {
         $addDaily = new NewsdailyForm();
         $addDaily->id = 0;
         $addDaily->day = $_POST['NewsdailyForm']['day'];
         $addDaily->message = $_POST['NewsdailyForm']['message'];
-        
+
         if ($addDaily->addDaily()) {
             Yii::$app->session->setFlash('success', 'Der Eintrag wurde erstellt!');
         } else {
             Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
         }
-        
+
         return $this->redirect(['dailys']);
     }
-    
+
     public function actionDeletedaily() {
         $deleteDaily = new NewsdailyForm();
-        $deleteDaily->id = $_POST['NewsdailyForm']['id'];;
+        $deleteDaily->id = $_POST['NewsdailyForm']['id'];
+        ;
         $deleteDaily->day = $_POST['NewsdailyForm']['day'];
         $deleteDaily->message = $_POST['NewsdailyForm']['message'];
-        
+
         if ($deleteDaily->deleteDaily()) {
             Yii::$app->session->setFlash('success', 'Der Eintrag wurde gelöscht!');
         } else {
             Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Löschen der Daten!');
         }
-        
+
         return $this->redirect(['dailys']);
     }
-    
+
     public function actionEditdaily() {
         $editDaily = new NewsdailyForm();
-        $editDaily->id = $_POST['NewsdailyForm']['id'];;
+        $editDaily->id = $_POST['NewsdailyForm']['id'];
+        ;
         $editDaily->day = $_POST['NewsdailyForm']['day'];
         $editDaily->message = $_POST['NewsdailyForm']['message'];
-        
+
         if ($editDaily->editDaily()) {
             Yii::$app->session->setFlash('success', 'Der Eintrag wurde geändert!');
         } else {
             Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Ändern der Daten!');
         }
-        
+
         return $this->redirect(['dailys']);
     }
 
     public function actionNews() {
         $query = Newsrss::find()->all();
-        
+
         return $this->render('news', ['links' => $query]);
     }
 
     public function actionNewsupdate() {
-        
-        
+
+
         $newsRssUpdate = new NewsrssUpdate();
         $newsRssUpdate->id = $_POST['NewsrssUpdate']['id'];
         $newsRssUpdate->URL = $_POST['NewsrssUpdate']['URL'];
         $newsRssUpdate->Description = $_POST['NewsrssUpdate']['Description'];
-        
+
         if ($newsRssUpdate->update()) {
-        Yii::$app->session->setFlash('success', 'Der Änderung wurde gespeichert!');
+            Yii::$app->session->setFlash('success', 'Der Änderung wurde gespeichert!');
         } else {
             Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Ändern der Daten!');
         }
         return $this->redirect(['news']);
     }
-    
+
     public function actionTickermessages() {
         $query = Tickermeldungen::find()->orderBy('Ablaufdatum')->all();
-        
+
         return $this->render('tickermessages', ['messages' => $query]);
     }
-    
+
     public function actionAddticker() {
         $addTicker = new TickermeldungenForm();
         $addTicker->ID = 0;
         $addTicker->Ablaufdatum = $_POST['TickermeldungenForm']['Ablaufdatum'];
         $addTicker->text = $_POST['TickermeldungenForm']['text'];
-        
+
         if ($addTicker->addTicker()) {
             Yii::$app->session->setFlash('success', 'Der Eintrag wurde erstellt!');
         } else {
             Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
         }
-        
+
         return $this->redirect(['tickermessages']);
     }
-    
+
     public function actionDeleteticker() {
         $deleteTicker = new TickermeldungenForm();
-        $deleteTicker->ID = $_POST['TickermeldungenForm']['ID'];;
+        $deleteTicker->ID = $_POST['TickermeldungenForm']['ID'];
+        ;
         $deleteTicker->Ablaufdatum = $_POST['TickermeldungenForm']['Ablaufdatum'];
         $deleteTicker->text = $_POST['TickermeldungenForm']['text'];
-        
+
         if ($deleteTicker->deleteTicker()) {
             Yii::$app->session->setFlash('success', 'Der Eintrag wurde gelöscht!');
         } else {
             Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Löschen der Daten!');
         }
-        
+
         return $this->redirect(['tickermessages']);
     }
-    
+
     public function actionEditticker() {
         $editTicker = new TickermeldungenForm();
-        $editTicker->ID = $_POST['TickermeldungenForm']['ID'];;
+        $editTicker->ID = $_POST['TickermeldungenForm']['ID'];
+        ;
         $editTicker->Ablaufdatum = $_POST['TickermeldungenForm']['Ablaufdatum'];
         $editTicker->text = $_POST['TickermeldungenForm']['text'];
-        
+
         if ($editTicker->editTicker()) {
             Yii::$app->session->setFlash('success', 'Der Eintrag wurde geändert!');
         } else {
             Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Ändern der Daten!');
         }
-        
+
         return $this->redirect(['tickermessages']);
     }
 
-    public function actionTimetable() {
-        return $this->render('timetable');
+    public function actionTimetable($kurs) {
+        $newEntry = new Kursplan();
+
+        $q = Kursplan::find()->joinWith('dozent', 'fach')->where(['Semester' => $kurs])->all();
+
+        $events = [];
+        foreach ($q as $e) {
+            switch ($e->Wochentag) {
+                case 'Montag': $weekday = 1;
+                    break;
+                case 'Dienstag': $weekday = 2;
+                    break;
+                case 'Mittwoch': $weekday = 3;
+                    break;
+                case 'Donnerstag': $weekday = 4;
+                    break;
+                case 'Freitag': $weekday = 5;
+                    break;
+                case 'Samstag': $weekday = 6;
+                    break;
+                case 'Sonntag': $weekday = 7;
+                    break;
+                default: $weekday = 0;
+                    break;
+            }
+            $event = new \common\models\Event();
+            $event->id = $e->ID;
+            $event->title = $e->fach['Name'] . "\r\n" . $e->Raum . "\r\n" . $e->dozent['Name'] . ' ' . $e->dozent['Vorname'];
+            $event->start = $e->ZeitVon;
+            $event->end = $e->ZeitBis;
+            $event->dow = [$weekday];
+            $event->editable = true;
+            $event->className = 'event-' . $e->ID;
+
+            $events[] = $event;
+        }
+
+        if ($newEntry->load(Yii::$app->request->post()) && $newEntry->validate()) {
+
+            switch ($_POST['Kursplan']['Wochentag']) {
+                case 0: $weekday = 'Montag';
+                    break;
+                case 1: $weekday = 'Dienstag';
+                    break;
+                case 2: $weekday = 'Mittwoch';
+                    break;
+                case 3: $weekday = 'Donnerstag';
+                    break;
+                case 4: $weekday = 'Freitag';
+                    break;
+                default: break;
+            }
+
+            $newEntry->Dozent = $_POST['Kursplan']['Dozent'];
+            $newEntry->Fach = $_POST['Kursplan']['Fach'];
+            $newEntry->Raum = $_POST['Kursplan']['Raum'];
+            $newEntry->ZeitVon = $_POST['Kursplan']['ZeitVon'];
+            $newEntry->ZeitBis = $_POST['Kursplan']['ZeitBis'];
+            $newEntry->Wochentag = $weekday;
+            $newEntry->Semester = $kurs;
+
+            if ($newEntry->save())
+                Yii::$app->response->redirect(array('site/timetable'));
+            return $this->refresh();
+        }
+
+        return $this->render('timetable', ['kurs' => $kurs, 'events' => $events, 'q' => $q, 'newEntry' => $newEntry]);
     }
 
+    public function actionTimetableview() {
+        $newEntry = new Kursplan();
+
+        $query = Kursplan::find()->orderBy('Semester')->select('Semester')->distinct()->all();
+        if ($query === null) {
+            throw new NotFoundHttpException;
+        }
+
+        if ($newEntry->load(Yii::$app->request->post())) {
+            foreach ($query as $q) {
+                if ($_POST['Kursplan']['Semester'] === $q->Semester) {
+                    Yii::$app->session->setFlash('error', 'Kurs ist bereits vorhanden!');
+                    return $this->refresh();
+                }
+            }
+            $newEntry->Semester = $_POST['Kursplan']['Semester'];
+            $newEntry->ZeitVon = '7:35';
+            $newEntry->ZeitBis = '9:05';
+            $newEntry->Wochentag = 'Montag';
+            if ($newEntry->save())
+                Yii::$app->response->redirect(array('site/timetableview'));
+            return $this->refresh();
+        }
+
+        return $this->render('timetableview', [
+                    'kursplan' => $query, 'newEntry' => $newEntry
+        ]);
+    }
+
+    public function actionUpdateevent() {
+        $model = Kursplan::findOne($_POST['Kursplan']['ID']);
+
+        switch ($_POST['Kursplan']['Wochentag']) {
+            case 0: $weekday = 'Montag';
+                break;
+            case 1: $weekday = 'Dienstag';
+                break;
+            case 2: $weekday = 'Mittwoch';
+                break;
+            case 3: $weekday = 'Donnerstag';
+                break;
+            case 4: $weekday = 'Freitag';
+                break;
+            default: break;
+        }
+
+        switch ($_POST['Kursplan']['ZeitVon']) {
+            case 0: $zeitvon = '7:30';
+                break;
+            case 1: $zeitvon = '9:30';
+                break;
+            case 2: $zeitvon = '11:15';
+                break;
+            case 3: $zeitvon = '14:00';
+                break;
+            case 4: $zeitvon = '15:45';
+                break;
+            case 5: $zeitvon = '17:30';
+                break;
+            default: break;
+        }
+
+        switch ($_POST['Kursplan']['ZeitBis']) {
+            case 0: $zeitbis = '9:05';
+                break;
+            case 1: $zeitbis = '11:00';
+                break;
+            case 2: $zeitbis = '12:45';
+                break;
+            case 3: $zeitbis = '15:30';
+                break;
+            case 4: $zeitbis = '17:15';
+                break;
+            case 5: $zeitbis = '19:00';
+                break;
+            default: break;
+        }
+
+        $model->Fach = $_POST['Kursplan']['Fach'];
+        $model->Dozent = $_POST['Kursplan']['Dozent'];
+        $model->Raum = $_POST['Kursplan']['Raum'];
+        $model->ZeitVon = $zeitvon;
+        $model->ZeitBis = $zeitbis;
+        $model->Wochentag = $weekday;
+
+        $model->update();
+        return $this->redirect(['/site/timetable', 'kurs' => $_POST['Kursplan']['Semester']]);
+    }
+
+    public function actionDeleteevent() {
+        $model = Kursplan::findOne($_POST['Kursplan']['ID']);
+
+        $model->delete();
+
+        return $this->redirect(['/site/timetable', 'kurs' => $_POST['Kursplan']['Semester']]);
+    }
+
+//    public function actionDrop($blub) {
+//        var_dump($blub);
+//    }
     public function actionUsergroups() {
         return $this->render('usergroups');
     }
 
     public function actionVvs() {
-        return $this->render('vvs');
+        $newEntry = new Vvs();
+
+        $query = Vvs::find()->all();
+
+        return $this->render('vvs', ['items' => $query, 'newEntry' => $newEntry]);
     }
 
-    /*
-    public function actionEdit($id) {
-        if ($id != NULL) {
-            $model = Dozent::findOne($id);
-            if ($model === null) {
-                throw new NotFoundHttpException;
-            }
-        } else {
-            $model = new Dozent();
-        }
-        //var_dump($model); die();
-        $modelUpdate = new DozentUpdateForm();
-        $modelPicture = new DozentPictureForm();
+    public function actionVvsadd() {
+        $model = new Vvsform();
+        $query = Vvs::find()->all();
 
-        // -----------------------------------------------------
-
-        if ($modelPicture->load(Yii::$app->request->post()) && $modelPicture->validate()) {
-            //echo "<script>console.log( 'drin' );</script>";
-            //var_dump($modelPicture); die; 
-            $modelPicture->picture = UploadedFile::getInstance($modelPicture, 'picture');
-            if ($modelPicture->upload($model)) {
-                return $this->refresh();
-            }
+//        $newEntry->file_path = UploadedFile::getInstances($newEntry, 'file_path');
+        $model->name = $_POST['Vvsform']['name'];
+        $model->direction = $_POST['Vvsform']['direction'];
+        $model->file_path = $_POST['Vvsform']['file_path'];
+        if ($model->add()) {
+            // file is uploaded successfully
+//            return $this->redirect(['/site/vvs']);
         }
 
-        // -----------------------------------------------------
+//        return $this->redirect(['/site/vvs']);
+//
+//        if ($newEntry->add())
+//            Yii::$app->response->redirect(array('site/vvs'));
+        return $this->redirect(['/site/vvs']);
+    }
 
+    public function actionVvsupload() {
+        $model = new Vvs();
 
         if (Yii::$app->request->isPost) {
 
@@ -274,14 +445,71 @@ class SiteController extends Controller {
                 // file is uploaded successfully
                 return $this->redirect(['/site/vvs']);
             }
-
-            return $this->refresh();
-        } else {
-            return $this->render('edit', ['model' => $model, 'modelUpdate' => $modelUpdate, 'modelPicture' => $modelPicture]);
         }
     }
-*/
-    
+
+    public function actionVvsedit() {
+        $model = Vvs::findOne($_POST['Vvs']['id']);
+
+        $model->name = $_POST['Vvs']['name'];
+        $model->direction = $_POST['Vvs']['direction'];
+        $model->file_path = $_POST['Vvs']['file_path'];
+
+        $model->update();
+        return $this->redirect(['/site/vvs']);
+    }
+
+    public function actionVvsdelete() {
+        $model = Vvs::findOne($_POST['Vvs']['id']);
+        $model->delete();
+
+        return $this->redirect(['/site/vvs']);
+    }
+
+    /*
+      public function actionEdit($id) {
+      if ($id != NULL) {
+      $model = Dozent::findOne($id);
+      if ($model === null) {
+      throw new NotFoundHttpException;
+      }
+      } else {
+      $model = new Dozent();
+      }
+      //var_dump($model); die();
+      $modelUpdate = new DozentUpdateForm();
+      $modelPicture = new DozentPictureForm();
+
+      // -----------------------------------------------------
+
+      if ($modelPicture->load(Yii::$app->request->post()) && $modelPicture->validate()) {
+      //echo "<script>console.log( 'drin' );</script>";
+      //var_dump($modelPicture); die;
+      $modelPicture->picture = UploadedFile::getInstance($modelPicture, 'picture');
+      if ($modelPicture->upload($model)) {
+      return $this->refresh();
+      }
+      }
+
+      // -----------------------------------------------------
+
+
+      if (Yii::$app->request->isPost) {
+
+      $model->file_path = UploadedFile::getInstance($model, 'file_path');
+      $model->saveAs('upload/' . $_POST['Vvs']['file_path']);
+      if ($model->upload()) {
+      // file is uploaded successfully
+      return $this->redirect(['/site/vvs']);
+      }
+
+      return $this->refresh();
+      } else {
+      return $this->render('edit', ['model' => $model, 'modelUpdate' => $modelUpdate, 'modelPicture' => $modelPicture]);
+      }
+      }
+     */
+
     public function actionSmsmessage() {
         $query = Authorisiertenummern::find()->orderBy('name')->all();
 
@@ -343,24 +571,24 @@ class SiteController extends Controller {
     public function actionDozent() {
         $editDozentPictureUpdate = new DozentPictureUpdateForm();
         $editDozentPictureUpdate->dozentPictureForm = new DozentPictureForm();
-        
-        if(Yii::$app->request->isPost) {
-            
+
+        if (Yii::$app->request->isPost) {
+
             $editDozentPictureUpdate->dozentPictureForm->picture = UploadedFile::getInstance($editDozentPictureUpdate->dozentPictureForm, 'picture');
             $editDozentPictureUpdate->id = $_POST['DozentPictureUpdateForm']['id'];
 
-            if($editDozentPictureUpdate->upload()) {
+            if ($editDozentPictureUpdate->upload()) {
                 Yii::$app->session->setFlash('success', 'Das Bild wurde erfolgreich hochgeladen.');
             } else {
                 Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Hochladen des Bildes!');
             }
         }
-        
+
         $query = Dozent::find()->orderBy('Name')->all();
 
         return $this->render('dozent', ['dozents' => $query, 'editDozentPictureUpdate' => $editDozentPictureUpdate]);
     }
-    
+
     public function actionNewdozent() {
 
         $newDozent = new DozentUpdateForm();
@@ -385,7 +613,7 @@ class SiteController extends Controller {
     }
 
     public function actionEditdozent() {
-        
+
         $dozent = new DozentUpdateForm();
         $dozent->id = $_POST['DozentUpdateForm']['id'];
         $dozent->name = $_POST['DozentUpdateForm']['name'];
@@ -406,16 +634,16 @@ class SiteController extends Controller {
 
         return $this->redirect(['dozent']);
     }
-    
+
     public function actionEditdozentpicture() {
-        
+
         var_dump($_POST);
         die();
     }
-    
+
     public function actionRemovedozent() {
-        
-        
+
+
         $dozent = new DozentUpdateForm();
         $dozent->id = $_POST['DozentUpdateForm']['id'];
         $dozent->name = '';
@@ -426,7 +654,7 @@ class SiteController extends Controller {
         $dozent->raum = '';
         $dozent->telefon = '';
         $dozent->email = '';
-        
+
         //////// DELETE DOZENT /////////
         if ($dozent->delete()) {
             Yii::$app->session->setFlash('success', 'Der Eintrag wurde erfolgreich gelöscht.');

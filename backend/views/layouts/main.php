@@ -41,7 +41,7 @@ AppAsset::register($this);
             ['label' => 'News', 'url' => ['/site/news']],
             ['label' => 'SMS', 'url' => ['/site/smsmessage']],
             ['label' => 'Ticker', 'url' => ['/site/tickermessages']],
-            ['label' => 'Stundenpläne', 'url' => ['/site/timetable']],
+            ['label' => 'Stundenpläne', 'url' => ['/site/timetableview']],
             ['label' => 'Nutzergruppen', 'url' => ['/site/usergroups']],
             ['label' => 'VVS', 'url' => ['/site/vvs']],
     ];
