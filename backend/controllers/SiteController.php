@@ -8,6 +8,8 @@ use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
 use common\models\Dozent;
+use common\models\Vvs;
+use backend\models\Vvsform;
 use backend\models\DozentUpdateForm;
 use backend\models\DozentPictureForm;
 use common\models\Kursplan;
@@ -33,7 +35,7 @@ class SiteController extends Controller {
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'dozent', 'news', 'smsmessage', 'tickermessages', 'timetable', 'timetableview', 'updateevent', 'deleteevent', 'usergroups', 'vvs', 'edit'],
+                        'actions' => ['logout', 'index', 'dozent', 'news', 'smsmessage', 'tickermessages', 'timetable', 'timetableview', 'updateevent', 'deleteevent', 'usergroups', 'vvs', 'vvsadd', 'vvsupload', 'vvsedit', 'vvsdelete', 'edit'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -189,7 +191,7 @@ class SiteController extends Controller {
         if ($newEntry->load(Yii::$app->request->post())) {
             foreach ($query as $q) {
                 if ($_POST['Kursplan']['Semester'] === $q->Semester) {
-                        Yii::$app->session->setFlash('error', 'Kurs ist bereits vorhanden!');
+                    Yii::$app->session->setFlash('error', 'Kurs ist bereits vorhanden!');
                     return $this->refresh();
                 }
             }
@@ -284,8 +286,65 @@ class SiteController extends Controller {
     }
 
     public function actionVvs() {
+        $newEntry = new Vvs();
+
         $query = Vvs::find()->all();
-        return $this->render('vvs', ['items' => $query]);
+
+        return $this->render('vvs', ['items' => $query, 'newEntry' => $newEntry]);
+    }
+
+    public function actionVvsadd() {
+        $model = new Vvsform();
+        $query = Vvs::find()->all();
+
+//        $newEntry->file_path = UploadedFile::getInstances($newEntry, 'file_path');
+        $model->name = $_POST['Vvsform']['name'];
+        $model->direction = $_POST['Vvsform']['direction'];
+        $model->file_path = $_POST['Vvsform']['file_path'];
+        if ($model->add()) {
+            // file is uploaded successfully
+//            return $this->redirect(['/site/vvs']);
+        }
+
+//        return $this->redirect(['/site/vvs']);
+//
+//        if ($newEntry->add())
+//            Yii::$app->response->redirect(array('site/vvs'));
+        return $this->redirect(['/site/vvs']);
+    }
+
+    public function actionVvsupload() {
+        $model = new Vvs();
+
+        if (Yii::$app->request->isPost) {
+            
+            $model->file_path = UploadedFile::getInstance($model, 'file_path');
+            $model->saveAs('upload/' . $_POST['Vvs']['file_path']);
+            if ($model->upload()) {
+                // file is uploaded successfully
+                return $this->redirect(['/site/vvs']);
+            }
+        }
+    }
+
+    public function actionVvsedit() {
+        $model = Vvs::findOne($_POST['Vvs']['id']);
+
+        $model->name = $_POST['Vvs']['name'];
+        $model->direction = $_POST['Vvs']['direction'];
+        $model->file_path = $_POST['Vvs']['file_path'];
+
+        $model->update();
+        return $this->redirect(['/site/vvs']);
+    }
+
+    public function actionVvsdelete() {
+        $model = Vvs::findOne($_POST['Vvs']['id']);
+
+
+        $model->delete();
+
+        return $this->redirect(['/site/vvs']);
     }
 
     public function actionEdit($id) {

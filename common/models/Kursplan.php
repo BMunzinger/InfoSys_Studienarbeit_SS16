@@ -4,7 +4,6 @@ namespace common\models;
 
 use common\models\Fach;
 use common\models\Dozent;
-use yii\helpers\ArrayHelper;
 use \yii\db\ActiveRecord;
 
 /**

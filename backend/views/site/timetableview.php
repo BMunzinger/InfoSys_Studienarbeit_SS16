@@ -13,13 +13,13 @@ $this->title = 'Stundenspläne';
 
 <?php
 Modal::begin([
-'header' => '<h2>Neuen Kurs erstellen</h2>',
- 'toggleButton' => ['label' => 'Neuen Kurs hinzufügen', 'class' => 'btn btn-info'],
+    'header' => '<h2>Neuen Kurs erstellen</h2>',
+    'toggleButton' => ['label' => 'Neuen Kurs hinzufügen', 'class' => 'btn btn-primary'],
 ]);
 
 
 $form = ActiveForm::begin([
-]);
+        ]);
 
 echo $form->field($newEntry, 'Semester');
 
@@ -30,14 +30,20 @@ ActiveForm::end();
 Modal::end();
 
 foreach ($kursplan as $k) {
-preg_match("/\d+/", $k->Semester, $semester);
-?>
-
-<div class='allSemester semester<?= $semester[0] ?>'>
-    <?=
-    Html::a('<div class="btn btn-info col-md-1" style="margin: 8px 8px 8px 0;">' . $k->Semester . '</div>', ['timetable', 'kurs' => $k->Semester])
+    preg_match("/\d+/", $k->Semester, $semester);
     ?>
-</div>
+
+    <div class='allSemester semester<?= $semester[0] ?>'>
+        <?=
+        Html::a('<div class="btn btn-info col-md-1">' . $k->Semester . '</div>', ['timetable', 'kurs' => $k->Semester])
+        ?>
+    </div>
 <?php }
 ?>
+
+<style>
+    .allSemester div {
+        margin: 8px 8px 8px 0;
+    }
+</style>
 
