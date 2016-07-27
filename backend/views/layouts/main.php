@@ -44,7 +44,6 @@ AppAsset::register($this);
             ['label' => 'Stundenpläne', 'url' => ['/site/timetable']],
             ['label' => 'Nutzergruppen', 'url' => ['/site/usergroups']],
             ['label' => 'VVS', 'url' => ['/site/vvs']],
-        ['label' => 'Test', 'url' => ['/site/test']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
