@@ -5,9 +5,7 @@ $this->params['breadcrumbs'][] = $this->title;
 use yii\helpers\Html;
 
 $tileColors = ['blue', 'green', 'red'];
-?>
-<h1>Personen</h1>
-<?php foreach ($dozents as $dozent) {
+foreach ($dozents as $dozent) {
     ?>
     <div class="col-md-4">
         <div class="thumbnail tile tile-large tile-clouds">
@@ -15,7 +13,7 @@ $tileColors = ['blue', 'green', 'red'];
             Html::a(''
                     . '<img class="dozentImg" style="height: 80%" src="data:image/png;base64, ' . chunk_split(base64_encode($dozent->Picture)) . '"/>'
                     . '<div class="dozentNameWrapper">'
-                    . '<h4 class="dozentName">' . $dozent->Titel . ' ' . $dozent->Name . ', ' . $dozent->Vorname . '</h4>'
+                    . '<h4 class="dozentName">' . $dozent->Titel . '' . $dozent->Name . ', ' . $dozent->Vorname . '</h4>'
                     . '</div>', ['dozentview', 'id' => $dozent->ID])
             ?>
         </div>

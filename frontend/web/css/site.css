@@ -111,3 +111,7 @@ a.desc:after {
 .nav > li > form > button:hover {
     text-decoration: none;
 }
+
+.navbar{
+    min-height: 70px;
+}

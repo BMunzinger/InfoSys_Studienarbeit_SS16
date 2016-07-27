@@ -7,9 +7,10 @@ use common\models\LoginForm;
 use common\models\Dozent;
 use common\models\Menu_item;
 use common\models\Vvs;
-use common\models\News;
+use common\models\Newsdaily;
 use common\models\Fach;
 use common\models\Kursplan;
+use common\models\Newsrss;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -76,7 +77,7 @@ class SiteController extends Controller {
      * @return mixed
      */
     public function actionIndex() {
-        $model = News::find()->all();
+        $model = Newsdaily::find()->all();
         return $this->render('index', ['model' => $model]);
         //return $this->render('index');
     }
@@ -95,7 +96,7 @@ class SiteController extends Controller {
                     'vvs' => $model,
         ]);
     }
-
+    
     /**
      * Logs in a user.
      *
@@ -217,7 +218,10 @@ class SiteController extends Controller {
     }
 
     public function actionNews() {
-        return $this->render('news');
+        
+        $query = Newsrss::find()->all();
+        
+        return $this->render('news', ['news' => $query]);
     }
 
     public function actionDozent() {
@@ -277,7 +281,7 @@ class SiteController extends Controller {
             }
             $event = new \common\models\Event();
             $event->id = $e->ID;
-            $event->title = $e->fach['Name'] . "\r\n" . $e->Raum . " " . $e->dozent['Name'] . ' ' . $e->dozent['Vorname'];
+            $event->title = $e->fach['Name'] . "\r\n" . $e->Raum . " " . $e->dozent['Vorname'] . ' ' . $e->dozent['Name'];
             $event->start = $e->ZeitVon;
             $event->end = $e->ZeitBis;
             $event->dow = [$weekday];

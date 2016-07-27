@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\bootstrap\Button;
 
 $this->title = 'Willkommen';
 ?>
@@ -26,7 +27,7 @@ $this->title = 'Willkommen';
     ?>
 
     <?=
-    Html::a('Hauptmenü', ['tiles']);
+    Html::a('Hauptmenü', ['tiles'], ['class'=>'btn btn-danger']);
     ?>
 </div>
 

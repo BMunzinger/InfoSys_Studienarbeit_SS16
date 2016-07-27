@@ -3,11 +3,14 @@ $this->title = 'News';
 $this->params['breadcrumbs'][] = ['label' => 'Overview', 'url' => ['tiles']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1>News</h1>
 <div class="site-news">
  <?php
+ 
+// var_dump($news[0]->URL);
+// die();
+ 
     $rss = new DOMDocument();
-    $rss->load('http://www.tagesschau.de/xml/rss2/');
+    $rss->load($news[0]->URL);
     $feed = array();
     foreach ($rss->getElementsByTagName('item') as $node) {
         $item = array(
@@ -17,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
         );
         array_push($feed, $item);
     }
-    $limit = 4;
+    $limit = 8;
     for ($x = 0; $x < $limit; $x++) {
         $title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
         $description = $feed[$x]['desc'];
