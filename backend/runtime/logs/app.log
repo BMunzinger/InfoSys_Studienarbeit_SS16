@@ -23323,3 +23323,373 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1469605204.565
     'REQUEST_TIME' => 1469605204
 ]
+2016-07-27 09:45:49 [192.168.64.1][2][cvrvovu44mgj0el0055egkaan7][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: kurs' in /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Controller.php:93
+Stack trace:
+#0 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#2 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('timetable', Array)
+#3 /mnt/hgfs/yii2/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/timetable', Array)
+#4 /mnt/hgfs/yii2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 /mnt/hgfs/yii2/backend/web/index.php(18): yii\base\Application->run()
+#6 {main}
+2016-07-27 09:45:49 [192.168.64.1][2][cvrvovu44mgj0el0055egkaan7][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.64.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:85
+2016-07-27 09:45:49 [192.168.64.1][2][cvrvovu44mgj0el0055egkaan7][info][application] $_GET = [
+    'r' => 'site/timetable'
+]
+
+$_COOKIE = [
+    '_identity' => 'bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc\",2592000]\";}'
+    'PHPSESSID' => 'cvrvovu44mgj0el0055egkaan7'
+    '_csrf' => '81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Ftimetableview'
+    'HTTP_COOKIE' => '_identity=bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc%22%2C2592000%5D%22%3B%7D; PHPSESSID=cvrvovu44mgj0el0055egkaan7; _csrf=81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.64.138'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.64.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '62876'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Ftimetable'
+    'REQUEST_URI' => '/index.php?r=site%2Ftimetable'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1469612749.149
+    'REQUEST_TIME' => 1469612749
+]
+2016-07-27 09:45:51 [192.168.64.1][2][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.64.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:85
+    in /mnt/hgfs/yii2/backend/controllers/SiteController.php:209
+2016-07-27 09:45:51 [192.168.64.1][2][-][info][application] $_GET = [
+    'r' => 'site/timetableview'
+]
+
+$_COOKIE = [
+    '_identity' => 'bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc\",2592000]\";}'
+    'PHPSESSID' => 'cvrvovu44mgj0el0055egkaan7'
+    '_csrf' => '81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Ftimetable'
+    'HTTP_COOKIE' => '_identity=bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc%22%2C2592000%5D%22%3B%7D; PHPSESSID=cvrvovu44mgj0el0055egkaan7; _csrf=81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.64.138'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.64.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '62878'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Ftimetableview'
+    'REQUEST_URI' => '/index.php?r=site%2Ftimetableview'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1469612751.56
+    'REQUEST_TIME' => 1469612751
+]
+2016-07-27 09:45:54 [192.168.64.1][2][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.64.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:85
+    in /mnt/hgfs/yii2/backend/controllers/SiteController.php:180
+2016-07-27 09:45:54 [192.168.64.1][2][-][info][application] $_GET = [
+    'r' => 'site/timetable'
+    'kurs' => 'S3'
+]
+
+$_COOKIE = [
+    '_identity' => 'bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc\",2592000]\";}'
+    'PHPSESSID' => 'cvrvovu44mgj0el0055egkaan7'
+    '_csrf' => '81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Ftimetableview'
+    'HTTP_COOKIE' => '_identity=bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc%22%2C2592000%5D%22%3B%7D; PHPSESSID=cvrvovu44mgj0el0055egkaan7; _csrf=81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.64.138'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.64.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '62878'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Ftimetable&kurs=S3'
+    'REQUEST_URI' => '/index.php?r=site%2Ftimetable&kurs=S3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1469612754.402
+    'REQUEST_TIME' => 1469612754
+]
+2016-07-27 09:45:54 [192.168.64.1][2][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.64.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:85
+    in /mnt/hgfs/yii2/backend/controllers/SiteController.php:65
+2016-07-27 09:45:54 [192.168.64.1][2][-][info][application] $_COOKIE = [
+    '_identity' => 'bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc\",2592000]\";}'
+    'PHPSESSID' => 'cvrvovu44mgj0el0055egkaan7'
+    '_csrf' => '81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_ACCEPT' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'identity'
+    'HTTP_REFERER' => 'http://back.dev/dist/css/metro-bootstrap.css'
+    'HTTP_COOKIE' => '_identity=bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc%22%2C2592000%5D%22%3B%7D; PHPSESSID=cvrvovu44mgj0el0055egkaan7; _csrf=81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.64.138'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.64.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '62878'
+    'REDIRECT_URL' => '/dist/fonts/glyphicons-halflings-regular.woff'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/dist/fonts/glyphicons-halflings-regular.woff'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1469612754.837
+    'REQUEST_TIME' => 1469612754
+]
+2016-07-27 09:45:54 [192.168.64.1][2][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.64.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:85
+    in /mnt/hgfs/yii2/backend/controllers/SiteController.php:65
+2016-07-27 09:45:54 [192.168.64.1][2][-][info][application] $_COOKIE = [
+    '_identity' => 'bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc\",2592000]\";}'
+    'PHPSESSID' => 'cvrvovu44mgj0el0055egkaan7'
+    '_csrf' => '81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_ACCEPT' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://back.dev/dist/css/metro-bootstrap.css'
+    'HTTP_COOKIE' => '_identity=bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc%22%2C2592000%5D%22%3B%7D; PHPSESSID=cvrvovu44mgj0el0055egkaan7; _csrf=81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.64.138'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.64.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '62878'
+    'REDIRECT_URL' => '/dist/fonts/glyphicons-halflings-regular.ttf'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/dist/fonts/glyphicons-halflings-regular.ttf'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1469612754.864
+    'REQUEST_TIME' => 1469612754
+]
+2016-07-27 09:45:56 [192.168.64.1][2][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.64.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:85
+    in /mnt/hgfs/yii2/backend/controllers/SiteController.php:209
+2016-07-27 09:45:55 [192.168.64.1][2][-][info][application] $_GET = [
+    'r' => 'site/timetableview'
+]
+
+$_COOKIE = [
+    '_identity' => 'bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc\",2592000]\";}'
+    'PHPSESSID' => 'cvrvovu44mgj0el0055egkaan7'
+    '_csrf' => '81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Ftimetable'
+    'HTTP_COOKIE' => '_identity=bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc%22%2C2592000%5D%22%3B%7D; PHPSESSID=cvrvovu44mgj0el0055egkaan7; _csrf=81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.64.138'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.64.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '62878'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Ftimetableview'
+    'REQUEST_URI' => '/index.php?r=site%2Ftimetableview'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1469612755.98
+    'REQUEST_TIME' => 1469612755
+]
+2016-07-27 09:45:57 [192.168.64.1][2][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.64.1
+    in /mnt/hgfs/yii2/backend/views/layouts/main.php:85
+    in /mnt/hgfs/yii2/backend/controllers/SiteController.php:293
+2016-07-27 09:45:57 [192.168.64.1][2][-][info][application] $_GET = [
+    'r' => 'site/vvs'
+]
+
+$_COOKIE = [
+    '_identity' => 'bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc\",2592000]\";}'
+    'PHPSESSID' => 'cvrvovu44mgj0el0055egkaan7'
+    '_csrf' => '81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'back.dev'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'de,en-US;q=0.7,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://back.dev/index.php?r=site%2Ftimetableview'
+    'HTTP_COOKIE' => '_identity=bda594ea44c4e6580d2bf0b215fca85f3224a14d2c01da3db4075c8c714fb8c7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ZKd59q8u2509cHsxQ_f6oQ3TDTPKcumc%22%2C2592000%5D%22%3B%7D; PHPSESSID=cvrvovu44mgj0el0055egkaan7; _csrf=81b8c3c5642fb91f318229ca11b4657a6bb90f608dd58b16bfebd9568b33b25ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ekpW_sjDJ9XvZPMp93_4MRCADJBUp6CE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at back.dev Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'back.dev'
+    'SERVER_ADDR' => '192.168.64.138'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.64.1'
+    'DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/mnt/hgfs/yii2/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/mnt/hgfs/yii2/backend/web/index.php'
+    'REMOTE_PORT' => '62878'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fvvs'
+    'REQUEST_URI' => '/index.php?r=site%2Fvvs'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1469612757.722
+    'REQUEST_TIME' => 1469612757
+]

@@ -317,7 +317,7 @@ class SiteController extends Controller {
         $model = new Vvs();
 
         if (Yii::$app->request->isPost) {
-            
+
             $model->file_path = UploadedFile::getInstance($model, 'file_path');
             $model->saveAs('upload/' . $_POST['Vvs']['file_path']);
             if ($model->upload()) {
@@ -340,8 +340,6 @@ class SiteController extends Controller {
 
     public function actionVvsdelete() {
         $model = Vvs::findOne($_POST['Vvs']['id']);
-
-
         $model->delete();
 
         return $this->redirect(['/site/vvs']);
