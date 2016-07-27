@@ -1,13 +1,15 @@
 <?php
-
 /* @var $this yii\web\View */
-use yii\widgets\ActiveForm;
-use yii\helpers\Html;
-use backend\models\Vvsform;
 
 $this->title = 'VVS';
+
+use yii\helpers\Html;
+use yii\bootstrap\Modal;
+use yii\widgets\ActiveForm;
+use backend\models\Vvsform;
 ?>
 <div class="site-index">
+    <h1>Fahrpläne</h1>
 </div>
 <table class="table" style="width: 100%;">
     <tr>

@@ -1,15 +1,45 @@
 <?php
-
 /* @var $this yii\web\View */
 
+use yii\widgets\ActiveForm;
+use yii\helpers\Html;
 use yii\bootstrap\Modal;
-use yii\bootstrap\ActiveForm;
-use common\models\Kursplan;
 use yii\helpers\ArrayHelper;
+use common\models\Kursplan;
 
 $this->title = 'Stundenspläne';
 ?>
 <div class="site-index">
+    <h1><?= $kurs ?></h1>
+    <?php
+    $wochentag = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag'];
+    $block = ['1. Block', '2. Block', '3. Block', '4. Block', '5. Block', '6. Block'];
+
+    Modal::begin([
+        'header' => '<h2>Neuen Kurs erstellen</h2>',
+        'toggleButton' => ['label' => 'Neuen Kurs hinzufügen', 'class' => 'btn btn-info'],
+    ]);
+
+    $form = ActiveForm::begin([
+            ])
+    ?>
+    <?=
+    $form->field($newEntry, 'Dozent')->dropDownList(ArrayHelper::map(common\models\Dozent::find()->all(), 'ID', function($q) {
+                return $q->Name . ' ' . $q->Vorname;
+            }), ['prompt' => 'Dozent auswählen'])
+    ?>
+    <?= $form->field($newEntry, 'Fach')->dropDownList(ArrayHelper::map(common\models\Fach::find()->all(), 'ID', 'Name'), ['prompt' => 'Fach auswählen']) ?>
+    <?= $form->field($newEntry, 'Raum') ?>
+    <?= $form->field($newEntry, 'ZeitVon') ?>
+    <?= $form->field($newEntry, 'ZeitBis') ?>
+    <?= $form->field($newEntry, 'Wochentag')->dropDownList($wochentag, ['prompt' => 'Wochentag auswählen']) ?>
+
+    <?= Html::submitButton('Speichern', ['class' => 'btn btn-info']) ?>
+
+    <?php
+    ActiveForm::end();
+    Modal::end();
+    ?>
 </div>
 
 <?php
@@ -19,7 +49,7 @@ foreach ($q as $t) {
         'toggleButton' => ['tag' => 'i', 'label' => 'Bearbeiten <i class="glyphicon glyphicon-pencil"></i>', 'id' => 'modal-' . $t->ID, 'style' => 'cursor: pointer'],
     ]);
 
-    $form = ActiveForm::begin(['action' => ['updateevent']]);
+    ActiveForm::begin(['action' => ['updateevent']]);
 
     $model = Kursplan::findOne($t->ID);
     echo $form->field($model, 'Dozent')
