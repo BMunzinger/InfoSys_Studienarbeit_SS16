@@ -52,7 +52,6 @@ foreach ($q as $t) {
     ActiveForm::begin(['action' => ['updateevent']]);
 
     $model = Kursplan::findOne($t->ID);
-
     echo $form->field($model, 'Dozent')
             ->dropDownList(ArrayHelper::map(common\models\Dozent::find()->all(), 'ID', function($q) {
                         return $q->Name . ' ' . $q->Vorname;

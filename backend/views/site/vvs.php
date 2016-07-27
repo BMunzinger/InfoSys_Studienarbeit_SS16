@@ -11,7 +11,6 @@ use backend\models\Vvsform;
 <div class="site-index">
     <h1>Fahrpläne</h1>
 </div>
-
 <table class="table" style="width: 100%;">
     <tr>
         <th>Linie</th>
