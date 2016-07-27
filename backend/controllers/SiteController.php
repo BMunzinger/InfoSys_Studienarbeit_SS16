@@ -266,11 +266,13 @@ class SiteController extends Controller {
         // -----------------------------------------------------
 
 
-        if ($modelUpdate->load(Yii::$app->request->post()) && $modelUpdate->validate()) {
-            if ($modelUpdate->update($model)) {
-                Yii::$app->session->setFlash('success', 'Die Änderungen wurden erfolgreich übernommen.');
-            } else {
-                Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
+        if (Yii::$app->request->isPost) {
+
+            $model->file_path = UploadedFile::getInstance($model, 'file_path');
+            $model->saveAs('upload/' . $_POST['Vvs']['file_path']);
+            if ($model->upload()) {
+                // file is uploaded successfully
+                return $this->redirect(['/site/vvs']);
             }
 
             return $this->refresh();
