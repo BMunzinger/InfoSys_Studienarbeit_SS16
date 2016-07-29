@@ -4,9 +4,9 @@
 use yii\helpers\Html;
 
 $this->title = 'Stundenplan';
+$this->params['breadcrumbs'][] = ['label' => 'Hauptmenü', 'url' => ['tiles']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1>Stundenplan</h1>
 <div id="content">
     <div class="filterTile">
         <h3>
@@ -25,7 +25,23 @@ $this->params['breadcrumbs'][] = $this->title;
         foreach ($kursplan as $k) {
             preg_match("/\d+/", $k->Semester, $semester);
             ?>
-            <div class='allSemester semester<?= $semester[0] ?>'>
+            <div class='allSemester semester<?= $semester[0] ?> hidden-sm hidden-xs'>
+                <?=
+                Html::a('<div class="thumbnail tile tile-wide tile-teal">'
+                        . '<h1>' . $k->Semester . '</h1>'
+                        . '</div>', ['kursplan', 'kurs' => $k->Semester])
+                ?>
+            </div>
+        <?php }
+        ?>
+
+    </div>
+    <div id="semesterWrapper">
+        <?php
+        foreach ($kursplan as $k) {
+            preg_match("/\d+/", $k->Semester, $semester);
+            ?>
+            <div class='allSemester semester<?= $semester[0] ?> hidden-md hidden-lg col-sm-6'>
                 <?=
                 Html::a('<div class="thumbnail tile tile-wide tile-teal">'
                         . '<h1>' . $k->Semester . '</h1>'
@@ -40,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
     function tileOrder() {
         var outerWidth = $('.allSemester a div').outerWidth(true) - $('.allSemester a div').width();
         var tileWidth = $('.allSemester a div').width() + outerWidth;
-        var tileNumber = Math.round($('#tileWrapper > div').filter(function () {
+        var tileNumber = Math.round($('.allSemester').filter(function () {
             return $(this).css('display') === 'block';
         }).length / 2);
         $('#tileWrapper').css('width', (tileWidth * tileNumber));
@@ -66,13 +82,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <style>
     .filterTile {
-        margin-bottom: 25px;
+        margin-bottom: 25px;   
+        top: 100px;
     }
 
     .filterTile a {
         padding-right: 15px;
         color: black;
         cursor: pointer;
+    }
+
+    #tileWrapper {
+        position: absolute;
+        top: 200px;
     }
 
     .allSemester a div {
@@ -87,5 +109,22 @@ $this->params['breadcrumbs'][] = $this->title;
     .filterTile a:hover {
         color: blue;
         text-decoration: none;
+    }
+
+    #semesterWrapper {
+        position: absolute;
+        top: 200px;
+    }
+
+    @media(min-width:767px) {
+        .filterTile {
+            position: fixed;
+        }
+    }
+
+    @media(max-width:415px) {
+        #semesterWrapper {
+            top: 250px;
+        }
     }
 </style>

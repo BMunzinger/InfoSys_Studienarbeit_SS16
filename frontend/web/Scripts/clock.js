@@ -25,7 +25,7 @@ function updateClock ( )
 function timerIncrement() {
     idleTime = idleTime + 1;
     console.log("idleTime+1: "+ idleTime);
-    if (idleTime > 2) { // 1 minute
+    if (idleTime > 59) { // 1 minute
         if(window.location.href.substr(window.location.href.lastIndexOf("/index.php")) !== "/index.php")
             window.location.href = '/index.php';
     }

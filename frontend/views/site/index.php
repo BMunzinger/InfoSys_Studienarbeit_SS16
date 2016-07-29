@@ -3,31 +3,41 @@
 use yii\helpers\Html;
 use yii\bootstrap\Button;
 
-$this->title = 'Willkommen';
+$this->title = 'Startseite';
+
 ?>
 <div class="site-welcome">
     <h1>Willkommen in der Fakultät Informationstechnik!</h1>
-    <h2>Daily News:</h2>
-
-
-
+    
+    <?php
+    date_default_timezone_set('UTC');
+    foreach ($model as $item) {
+        //var_dump($item); die();
+        if ($item->day == date("Y-m-j")) {
+            echo "<h2>Daily News:</h2>";
+            break;
+        }
+    }
+    ?>
+    
     <?php
     date_default_timezone_set('UTC');
     foreach ($model as $item) {
         //var_dump($item); die();
         if ($item->day == date("Y-m-j")) {
             ?>
-            <div class="col-sm-12 news">
-                <div><?= $item->day ?> </div> 
+            <div class="col-sm-12 thumbnail tile-news tile-info">
+<!--                <div><?= $item->day ?> </div> -->
                 <div> <?= $item->message ?></div>
             </div>
         <?php
         }
     }
     ?>
-
+    <br/>
+    <br/>
     <?=
-    Html::a('Hauptmenü', ['tiles'], ['class'=>'btn btn-danger']);
+    Html::a('Weiter ins Hauptmenü >>', ['tiles'], ['id'=>'buttonMainmenu', 'class'=>'btn-xlg btn-danger']);
     ?>
 </div>
 
@@ -37,6 +47,8 @@ $this->title = 'Willkommen';
         height: 10%;
         color: white;
         background-color: #34495e;
+        font-size: 20px;
+        padding: 5px;
     }
     .tile-home{
         padding: 10px;
@@ -48,5 +60,24 @@ $this->title = 'Willkommen';
     .news{
         padding: 0;
         font-size: 15px;
+    }
+    
+    .site-welcome > h1{
+        text-align: center;
+    }
+    
+    .site-welcome a:hover{
+        text-decoration: none;
+    }
+    
+    #buttonMainmenu{
+        display: table; margin: 0 auto;
+    }
+    
+    .btn-xlg {
+    
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
     }
 </style>

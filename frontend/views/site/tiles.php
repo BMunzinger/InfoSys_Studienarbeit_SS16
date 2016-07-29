@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-$this->title = 'Overview';
+$this->title = 'Hauptmenü';
 $this->params['breadcrumbs'][] = $this->title;
 
 foreach ($model as $item) {

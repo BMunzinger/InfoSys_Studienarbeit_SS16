@@ -30,8 +30,10 @@ $this->title = 'Stundenspläne';
     ?>
     <?= $form->field($newEntry, 'Fach')->dropDownList(ArrayHelper::map(common\models\Fach::find()->all(), 'ID', 'Name'), ['prompt' => 'Fach auswählen']) ?>
     <?= $form->field($newEntry, 'Raum') ?>
-    <?= $form->field($newEntry, 'ZeitVon') ?>
-    <?= $form->field($newEntry, 'ZeitBis') ?>
+    <?= $form->field($newEntry, 'ZeitVon')
+            ->dropDownList($block, ['prompt' => 'Zeit von']); ?>
+    <?= $form->field($newEntry, 'ZeitBis')
+            ->dropDownList($block, ['prompt' => 'Zeit bis']); ?>
     <?= $form->field($newEntry, 'Wochentag')->dropDownList($wochentag, ['prompt' => 'Wochentag auswählen']) ?>
 
     <?= Html::submitButton('Speichern', ['class' => 'btn btn-info']) ?>

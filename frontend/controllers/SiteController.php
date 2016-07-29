@@ -20,6 +20,7 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use common\models\Tickermeldungen;
 
 /**
  * Site controller
@@ -278,6 +279,7 @@ class SiteController extends Controller {
                     break;
                 case 'Sonntag': $weekday = 7;
                     break;
+                default: $weekday = 0;
             }
             $event = new \common\models\Event();
             $event->id = $e->ID;
@@ -290,5 +292,5 @@ class SiteController extends Controller {
 
         return $this->render('kursplan', [ 'kurs' => $kurs, 'events' => $events]);
     }
-
+    
 }

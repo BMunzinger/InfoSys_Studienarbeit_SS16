@@ -24,6 +24,8 @@ use common\models\Tickermeldungen;
 use backend\models\TickermeldungenForm;
 use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
+use common\models\Fach;
+use backend\models\KursUpdateForm;
 
 /**
  * Site controller
@@ -35,32 +37,33 @@ class SiteController extends Controller {
      */
     public function behaviors() {
         return [
-        'access' => [
-        'class' => AccessControl::className(),
-        'rules' => [
-        [
-        'actions' => ['login', 'error'],
-        'allow' => true,
-        ],
-        [
-        'actions' => ['logout', 'index', 'dozent', 'news', 'newsupdate', 'usergroups',
-        'timetable', 'timetable', 'timetableview', 'updateevent', 'deleteevent',
-        'vvs', 'vvsadd', 'vvsupload', 'vvsedit', 'vvsdelete',
-        'tickermessages', 'addticker', 'editticker', 'deleteticker',
-        'dailys', 'adddaily', 'deletedaily', 'editdaily',
-        'smsmessage', 'addnumber', 'removenumber', 'editnumber',
-        'newdozent', 'editdozent', 'editdozentpicture', 'removedozent'],
-        'allow' => true,
-        'roles' => ['@'],
-        ],
-        ],
-        ],
-        'verbs' => [
-        'class' => VerbFilter::className(),
-        'actions' => [
-        'logout' => ['post'],
-        ],
-        ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['login', 'error'],
+                        'allow' => true,
+                    ],
+                    [
+                        'actions' => ['logout', 'index', 'dozent', 'news', 'newsupdate', 'usergroups',
+                            'timetable', 'timetable', 'timetableview', 'updateevent', 'deleteevent',
+                            'vvs', 'vvsadd', 'vvsupload', 'vvsedit', 'vvsdelete',
+                            'tickermessages', 'addticker', 'editticker', 'deleteticker',
+                            'dailys', 'adddaily', 'deletedaily', 'editdaily',
+                            'smsmessage', 'addnumber', 'removenumber', 'editnumber',
+                            'newdozent', 'editdozent', 'editdozentpicture', 'removedozent',
+                            'kurs', 'newkurs', 'editkurs', 'removekurs'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
         ];
     }
 
@@ -286,11 +289,43 @@ class SiteController extends Controller {
                 default: break;
             }
 
+            switch ($_POST['Kursplan']['ZeitVon']) {
+                case 0: $zeitvon = '7:30';
+                    break;
+                case 1: $zeitvon = '9:30';
+                    break;
+                case 2: $zeitvon = '11:15';
+                    break;
+                case 3: $zeitvon = '14:00';
+                    break;
+                case 4: $zeitvon = '15:45';
+                    break;
+                case 5: $zeitvon = '17:30';
+                    break;
+                default: break;
+            }
+
+            switch ($_POST['Kursplan']['ZeitBis']) {
+                case 0: $zeitbis = '9:05';
+                    break;
+                case 1: $zeitbis = '11:00';
+                    break;
+                case 2: $zeitbis = '12:45';
+                    break;
+                case 3: $zeitbis = '15:30';
+                    break;
+                case 4: $zeitbis = '17:15';
+                    break;
+                case 5: $zeitbis = '19:00';
+                    break;
+                default: break;
+            }
+
             $newEntry->Dozent = $_POST['Kursplan']['Dozent'];
             $newEntry->Fach = $_POST['Kursplan']['Fach'];
             $newEntry->Raum = $_POST['Kursplan']['Raum'];
-            $newEntry->ZeitVon = $_POST['Kursplan']['ZeitVon'];
-            $newEntry->ZeitBis = $_POST['Kursplan']['ZeitBis'];
+            $newEntry->ZeitVon = $zeitvon;
+            $newEntry->ZeitBis = $zeitbis;
             $newEntry->Wochentag = $weekday;
             $newEntry->Semester = $kurs;
 
@@ -568,6 +603,57 @@ class SiteController extends Controller {
         return $this->redirect(['smsmessage']);
     }
 
+    public function actionKurs() {
+        $query = Fach::find()->orderBy('Name')->all();
+
+        return $this->render('kurs', ['items' => $query]);
+    }
+
+    public function actionNewkurs() {
+
+        $newKurs = new KursUpdateForm();
+        $newKurs->Name = $_POST['KursUpdateForm']['Name'];
+
+        //////// ADD NEW KURS /////////
+        if ($newKurs->add()) {
+            Yii::$app->session->setFlash('success', 'Der Eintrag wurde erstellt!');
+        } else {
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Erstellen der Daten!');
+        }
+
+        return $this->redirect(['kurs']);
+    }
+
+    public function actionEditkurs() {
+
+        $kurs = new KursUpdateForm();
+        $kurs->ID = $_POST['KursUpdateForm']['ID'];
+        $kurs->Name = $_POST['KursUpdateForm']['Name'];
+
+        //////// UPDATE KURS /////////
+        if ($kurs->update()) {
+            Yii::$app->session->setFlash('success', 'Die Änderungen wurden erfolgreich übernommen.');
+        } else {
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
+        }
+
+        return $this->redirect(['kurs']);
+    }
+
+    public function actionRemovekurs() {
+        $kurs = new KursUpdateForm();
+        $kurs->ID = $_POST['KursUpdateForm']['ID'];
+
+        //////// DELETE Kurs /////////
+        if ($kurs->delete()) {
+            Yii::$app->session->setFlash('success', 'Der Eintrag wurde erfolgreich gelöscht.');
+        } else {
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Löschen der Daten!');
+        }
+
+        return $this->redirect(['kurs']);
+    }
+    
     public function actionDozent() {
         $editDozentPictureUpdate = new DozentPictureUpdateForm();
         $editDozentPictureUpdate->dozentPictureForm = new DozentPictureForm();

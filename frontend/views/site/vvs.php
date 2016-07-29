@@ -1,5 +1,6 @@
 <?php
 $this->title = 'VVS';
+$this->params['breadcrumbs'][] = ['label' => 'Hauptmenü', 'url' => ['tiles']];
 $this->params['breadcrumbs'][] = $this->title;
 use yii\helpers\Html;
 

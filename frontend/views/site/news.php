@@ -1,6 +1,6 @@
 <?php
 $this->title = 'News';
-$this->params['breadcrumbs'][] = ['label' => 'Overview', 'url' => ['tiles']];
+$this->params['breadcrumbs'][] = ['label' => 'Hauptmenü', 'url' => ['tiles']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-news">
