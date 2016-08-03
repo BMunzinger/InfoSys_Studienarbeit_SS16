@@ -13,7 +13,7 @@ $this->title = 'Startseite';
     date_default_timezone_set('UTC');
     foreach ($model as $item) {
         //var_dump($item); die();
-        if ($item->day == date("Y-m-j")) {
+        if ($item->day == date("Y-m-d")) {
             echo "<h2>Daily News:</h2>";
             break;
         }
@@ -24,7 +24,7 @@ $this->title = 'Startseite';
     date_default_timezone_set('UTC');
     foreach ($model as $item) {
         //var_dump($item); die();
-        if ($item->day == date("Y-m-j")) {
+        if ($item->day == date("Y-m-d")) {
             ?>
             <div class="col-sm-12 thumbnail tile-news tile-info">
 <!--                <div><?= $item->day ?> </div> -->

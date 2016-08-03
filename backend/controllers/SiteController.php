@@ -347,12 +347,12 @@ class SiteController extends Controller {
 
         if ($newEntry->load(Yii::$app->request->post())) {
             foreach ($query as $q) {
-                if ($_POST['Kursplan']['Semester'] === $q->Semester) {
+                if (strtoupper($_POST['Kursplan']['Semester']) . $_POST['Semester'] === $q->Semester) {
                     Yii::$app->session->setFlash('error', 'Kurs ist bereits vorhanden!');
                     return $this->refresh();
                 }
             }
-            $newEntry->Semester = $_POST['Kursplan']['Semester'];
+            $newEntry->Semester = strtoupper($_POST['Kursplan']['Semester']) . $_POST['Semester'];
             $newEntry->ZeitVon = '7:35';
             $newEntry->ZeitBis = '9:05';
             $newEntry->Wochentag = 'Montag';

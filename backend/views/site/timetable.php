@@ -30,13 +30,17 @@ $this->title = 'Stundenspläne';
     ?>
     <?= $form->field($newEntry, 'Fach')->dropDownList(ArrayHelper::map(common\models\Fach::find()->all(), 'ID', 'Name'), ['prompt' => 'Fach auswählen']) ?>
     <?= $form->field($newEntry, 'Raum') ?>
-    <?= $form->field($newEntry, 'ZeitVon')
-            ->dropDownList($block, ['prompt' => 'Zeit von']); ?>
-    <?= $form->field($newEntry, 'ZeitBis')
-            ->dropDownList($block, ['prompt' => 'Zeit bis']); ?>
+    <?=
+            $form->field($newEntry, 'ZeitVon')
+            ->dropDownList($block, ['prompt' => 'Zeit von']);
+    ?>
+    <?=
+            $form->field($newEntry, 'ZeitBis')
+            ->dropDownList($block, ['prompt' => 'Zeit bis']);
+    ?>
     <?= $form->field($newEntry, 'Wochentag')->dropDownList($wochentag, ['prompt' => 'Wochentag auswählen']) ?>
 
-    <?= Html::submitButton('Speichern', ['class' => 'btn btn-info']) ?>
+    <?= Html::submitButton('Speichern', ['class' => 'btn btn-success']) ?>
 
     <?php
     ActiveForm::end();
@@ -69,7 +73,7 @@ foreach ($q as $t) {
             ->dropDownList($wochentag, ['prompt' => 'Wochentag auswählen']);
 
 
-    echo Html::submitButton('Speichern', ['class' => 'btn btn-info']);
+    echo Html::submitButton('Speichern', ['class' => 'btn btn-success']);
 
     echo $form->field($model, 'ID')->hiddenInput()->label(false);
     echo $form->field($model, 'Semester')->hiddenInput()->label(false);
@@ -81,7 +85,7 @@ foreach ($q as $t) {
     ]);
     echo $form->field($model, 'ID')->hiddenInput()->label(false);
     echo $form->field($model, 'Semester')->hiddenInput()->label(false);
-    echo Html::submitButton('Löschen', ['data' => ['confirm' => 'Möchten Sie denn Eintrag wirklich löschen?'], 'class' => 'btn btn-info']);
+    echo Html::submitButton('Löschen', ['data' => ['confirm' => 'Möchten Sie denn Eintrag wirklich löschen?'], 'class' => 'btn btn-danger']);
     ActiveForm::end();
     Modal::end();
     ?>
@@ -125,16 +129,26 @@ foreach ($q as $t) {
         $('.modal-body input, .modal-body select').prop('required', true);
 
         $('.modal-body #kursplan-zeitvon').on('change', function () {
+            $('.modal-body #kursplan-zeitvon option').show();
             $('.modal-body #kursplan-zeitbis option').show();
             var that = $(this).val();
+            if (that === '') {
+                console.log('drin');
+                that = 0;
+            }
             $('.modal-body #kursplan-zeitbis option').filter(function () {
                 return this.value < that;
             }).hide();
         });
-        
+
         $('.modal-body #kursplan-zeitbis').on('change', function () {
+            $('.modal-body #kursplan-zeitvon option').show();
             $('.modal-body #kursplan-zeitbis option').show();
             var that = $(this).val();
+            if (that === '') {
+                console.log('drin');
+                that = 0;
+            }
             $('.modal-body #kursplan-zeitvon option').filter(function () {
                 return this.value > that;
             }).hide();

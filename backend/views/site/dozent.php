@@ -7,7 +7,7 @@ use yii\bootstrap\ActiveForm;
 use backend\models\DozentUpdateForm;
 use backend\models\DozentPictureForm;
 
-$this->title = 'Dozent';
+$this->title = 'Personen';
 ?>
 
 <!-- <h1>Dozent</h1> -->
@@ -108,8 +108,8 @@ $this->title = 'Dozent';
 
     <?php
     Modal::begin([
-        'header' => '<h2>Neuer Dozenten</h2>',
-        'toggleButton' => ['label' => '<i class="glyphicon glyphicon-plus"></i> Neuen Dozenten hinzufügen', 'class' => 'btn btn-primary'],
+        'header' => '<h2>Neue Person</h2>',
+        'toggleButton' => ['label' => '<i class="glyphicon glyphicon-plus"></i> Neue Person hinzufügen', 'class' => 'btn btn-primary'],
     ]);
 
     $form = ActiveForm::begin(['id' => 'new-dozent-form', 'action' => ['newdozent']]);
@@ -127,7 +127,7 @@ $this->title = 'Dozent';
         <?= $form->field($newDozent, 'email')->textInput(['placeholder' => 'Email']) ?>
         <?= $form->field($newDozent, 'telefon')->textInput(['placeholder' => 'Telefon']) ?>
         <button style="width: 100%;" type="submit" class="btn btn-success">
-            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Speichern
         </button>
     </div>
     <?php
