@@ -27,6 +27,8 @@ use yii\web\UploadedFile;
 use common\models\Fach;
 use backend\models\KursUpdateForm;
 
+Yii::setAlias('@front', 'http://front.dev');
+
 /**
  * Site controller
  */
@@ -450,45 +452,38 @@ class SiteController extends Controller {
     }
 
     public function actionVvsadd() {
-        $model = new Vvsform();
-        $query = Vvs::find()->all();
-
-//        $newEntry->file_path = UploadedFile::getInstances($newEntry, 'file_path');
-        $model->name = $_POST['Vvsform']['name'];
-        $model->direction = $_POST['Vvsform']['direction'];
-        $model->file_path = $_POST['Vvsform']['file_path'];
-        if ($model->add()) {
-            // file is uploaded successfully
-//            return $this->redirect(['/site/vvs']);
-        }
-
-//        return $this->redirect(['/site/vvs']);
-//
-//        if ($newEntry->add())
-//            Yii::$app->response->redirect(array('site/vvs'));
-        return $this->redirect(['/site/vvs']);
-    }
-
-    public function actionVvsupload() {
         $model = new Vvs();
 
-        if (Yii::$app->request->isPost) {
+        $model->name = $_POST['Vvs']['name'];
+        $model->direction = $_POST['Vvs']['direction'];
 
-            $model->file_path = UploadedFile::getInstance($model, 'file_path');
-            $model->saveAs('upload/' . $_POST['Vvs']['file_path']);
-            if ($model->upload()) {
-                // file is uploaded successfully
-                return $this->redirect(['/site/vvs']);
-            }
+        $file = UploadedFile::getInstance($model, 'file_path');
+
+        $model->file_path = 'media/vvs/' . $file->name;
+
+
+        if ($file != NULL) {
+            $file->saveAs(Yii::getAlias('@frontend/web/media/vvs/') . $file->name);
         }
+
+        $model->save();
+        return $this->redirect(['/site/vvs']);
     }
 
     public function actionVvsedit() {
         $model = Vvs::findOne($_POST['Vvs']['id']);
+        $query = new Vvs();
 
         $model->name = $_POST['Vvs']['name'];
         $model->direction = $_POST['Vvs']['direction'];
-        $model->file_path = $_POST['Vvs']['file_path'];
+
+        $file = UploadedFile::getInstance($query, 'file_path');
+
+        $model->file_path = 'media/vvs/' . $file->name;
+
+        if ($file != NULL) {
+            $file->saveAs(Yii::getAlias('@frontend/web/media/vvs/') . $file->name);
+        }
 
         $model->update();
         return $this->redirect(['/site/vvs']);
@@ -653,7 +648,7 @@ class SiteController extends Controller {
 
         return $this->redirect(['kurs']);
     }
-    
+
     public function actionDozent() {
         $editDozentPictureUpdate = new DozentPictureUpdateForm();
         $editDozentPictureUpdate->dozentPictureForm = new DozentPictureForm();

@@ -19,7 +19,7 @@ use backend\models\Vvsform;
         <th colspan="2">Options</th>
     </tr>
     <?php foreach ($items as $item) { ?>
-        <?php $form = ActiveForm::begin(['action' => ['vvsedit']], ['options' => ['enctype' => 'multipart/form-data']]); ?>
+        <?php $form = ActiveForm::begin(['action' => ['vvsedit'], 'options' => ['enctype' => 'multipart/form-data']]); ?>
         <tr>
             <td>
                 <?= $form->field($item, 'name')->textInput(['value' => $item->name])->label(false) ?>
@@ -28,7 +28,7 @@ use backend\models\Vvsform;
                 <?= $form->field($item, 'direction')->textInput(['value' => $item->direction])->label(false) ?>
             </td>
             <td>
-                <?= $form->field($newEntry, 'file_path')->fileInput()->label(false) ?>
+                <?= $form->field($item, 'file_path')->fileInput()->label(false) ?>
             </td>
             <td width="1%">
                 <?= Html::submitButton('Bearbeiten', ['class' => 'btn btn-success']); ?>
@@ -47,25 +47,16 @@ use backend\models\Vvsform;
         </tr><?php
         ActiveForm::end();
     }
-    $form = ActiveForm::begin(['action' => ['vvsupload']], ['options' => ['enctype' => 'multipart/form-data']]);
+    $form = ActiveForm::begin(['action' => ['vvsadd'], 'options' => ['enctype' => 'multipart/form-data']]);
     ?>
     <tr>
+
+        <td><?= $form->field($newEntry, 'name')->textInput(['placeholder' => 'Name'])->label(false) ?></td>
+        <td><?= $form->field($newEntry, 'direction')->textInput(['placeholder' => 'Fahrtrichtung'])->label(false) ?></td>
         <td><?= $form->field($newEntry, 'file_path')->fileInput()->label(false) ?>
-            <?= Html::submitButton('Erstellen', ['class' => 'btn btn-success']);
-            ?>
         </td>
-        <?php
-        ActiveForm::end();
-
-        $form = ActiveForm::begin(['action' => ['vvsadd']]);
-        $addEntry = new Vvsform();
-        ?>
-
-        <td><?= $form->field($addEntry, 'name')->textInput(['placeholder' => 'Name'])->label(false) ?></td>
-        <td><?= $form->field($addEntry, 'direction')->textInput(['placeholder' => 'Fahrtrichtung'])->label(false) ?></td>
         <td colspan="2">
-            <?= Html::submitButton('Erstellen', ['class' => 'btn btn-success']);
-            ?>
+            <?= Html::submitButton('Erstellen', ['class' => 'btn btn-success']); ?>
         </td>
     </tr>
     <?php

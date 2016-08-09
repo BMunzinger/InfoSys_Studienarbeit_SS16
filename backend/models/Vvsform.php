@@ -18,7 +18,6 @@ class Vvsform extends Model {
     public function rules() {
         return [
 //            [['name', 'direction'], 'required'],
-            [['file_path'], 'file'],
         ];
     }
 
