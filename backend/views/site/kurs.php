@@ -16,78 +16,53 @@ $this->title = 'Fach';
     <table class="table" style="width: 100%;">
         <tr>
             <th>Name</th>
-            <th width="1%"></th>
+            <th colspan="2" width="1%"></th>
         </tr>
+        <tr>
+            <?php
+            $form = ActiveForm::begin(['id' => 'new-kurs-form', 'action' => ['newkurs']]);
 
+            $newKurs = new KursUpdateForm();
+            ?>
+
+            <td><?= $form->field($newKurs, 'Name')->textInput(['placeholder' => 'Name'])->label(false); ?></td>
+            <td colspan="2"><?= Html::submitButton('<i class="glyphicon glyphicon-plus"></i> Neuen Kurs hinzufügen', ['class' => 'btn btn-primary']); ?></td>
+            <?php
+            ActiveForm::end();
+            ?>
+
+        </tr>
 
         <?php foreach ($items as $item) { ?>
 
             <tr>
-                <td><?= $item->Name ?></td>
+                <?php
+                $form = ActiveForm::begin(['id' => 'edit-kurs-form', 'action' => ['editkurs']]);
+
+                $editKurs = new KursUpdateForm();
+                ?>
                 <td>
-                    <?php
-                    Modal::begin([
-                        'header' => '<h2>' . $item->Name . '</h2>',
-                        'toggleButton' => ['label' => '<i class="glyphicon glyphicon-pencil"></i> bearbeiten', 'class' => 'btn btn-primary'],
-                    ]);
-                    ?>
-                    <div>
-                        <?php
-                        $form = ActiveForm::begin(['id' => 'edit-kurs-form', 'action' => ['editkurs']]);
 
-                        $editKurs = new KursUpdateForm();
-                        ?>
-                        <div style="clear: both;">
-                            <hr>
-                            <?= $form->field($editKurs, 'ID')->hiddenInput(['value' => $item->ID])->label(false) ?>
-                            <?= $form->field($editKurs, 'Name')->textInput(['value' => $item->Name]) ?>
-                            <button style="width: 100%;" type="submit" class="btn btn-success">
-                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Speichern
-                            </button>
-                            <?php
-                            ActiveForm::end();
-                            $form = ActiveForm::begin(['id' => 'remove-kurs-form', 'action' => ['removekurs']]);
-                            ?>
-                            <?= $form->field($editKurs, 'ID')->hiddenInput(['value' => $item->ID])->label(false) ?>
-                            <button style="width: 100%;" type="submit" class="btn btn-danger">
-                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Löschen
-                            </button>
-                        </div>
-                    </div>
-
-                    <?php
-                    ActiveForm::end();
-                    Modal::end();
-                    ?>
+                    <?= $form->field($editKurs, 'Name')->textInput(['value' => $item->Name])->label(false) ?>
                 </td>
-             <!--   <td><?= Html::a('<span style="float: right;" class="btn-label">Show all</span>', ['edit', 'id' => $item->ID], ['class' => 'btn btn-primary']) ?></td> -->
+                <td>
+                    <?= Html::submitButton('<i class="glyphicon glyphicon-ok"></i> Speichern', ['class' => 'btn btn-success']); ?>
+                </td>
+                <?= $form->field($editKurs, 'ID')->hiddenInput(['value' => $item->ID])->label(false); ?>
+                <?php ActiveForm::end(); ?>
+
+                <?php
+                $form = ActiveForm::begin(['id' => 'remove-kurs-form', 'action' => ['removekurs']]);
+                echo $form->field($editKurs, 'ID')->hiddenInput(['value' => $item->ID])->label(false);
+                ?>
+                <td>
+                    <?= Html::submitButton('<i class="glyphicon glyphicon-remove"></i> Löschen', ['class' => 'btn btn-danger']); ?>
+                </td>
+                <?php
+                ActiveForm::end();
+                ?>
             </tr>
 
         <?php } ?>
     </table>
-
-    <?php
-    Modal::begin([
-        'header' => '<h2>Neuer Kurs</h2>',
-        'toggleButton' => ['label' => '<i class="glyphicon glyphicon-plus"></i> Neuen Kurs hinzufügen', 'class' => 'btn btn-primary'],
-    ]);
-
-    $form = ActiveForm::begin(['id' => 'new-kurs-form', 'action' => ['newkurs']]);
-
-    $newKurs = new KursUpdateForm();
-    ?>
-
-    <div>
-        <?= $form->field($newKurs, 'Name')->textInput(['placeholder' => 'Name']) ?>
-        <button style="width: 100%;" type="submit" class="btn btn-success">
-            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save
-        </button>
-    </div>
-    <?php
-    ActiveForm::end();
-    Modal::end();
-    ?>
-
-<!-- <td><?= Html::a('<span style="float: left;" class="btn-label">Kurs hinzufügen</span>', ['edit', 'id' => NULL], ['class' => 'btn btn-primary']) ?></td> -->
-
 </div>

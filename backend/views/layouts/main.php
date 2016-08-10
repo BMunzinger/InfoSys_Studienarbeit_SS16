@@ -35,15 +35,15 @@ AppAsset::register($this);
             ]);
             $menuItems = [
                 ['label' => 'Home', 'url' => ['/site/index']],
-                ['label' => 'Personen', 'url' => ['/site/dozent']],
-                ['label' => 'Kurs', 'url' => ['/site/kurs']],
-                ['label' => 'Daily-News', 'url' => ['/site/dailys']],
                 ['label' => 'News', 'url' => ['/site/news']],
-                ['label' => 'SMS', 'url' => ['/site/smsmessage']],
+                ['label' => 'Daily-News', 'url' => ['/site/dailys']],
                 ['label' => 'Ticker', 'url' => ['/site/tickermessages']],
+                ['label' => 'SMS', 'url' => ['/site/smsmessage']],
+                ['label' => 'Kurs', 'url' => ['/site/kurs']],
                 ['label' => 'Stundenpläne', 'url' => ['/site/timetableview']],
-                ['label' => 'Nutzergruppen', 'url' => ['/site/usergroups']],
+                ['label' => 'Personen', 'url' => ['/site/dozent']],
                 ['label' => 'Fahrpläne', 'url' => ['/site/vvs']],
+                ['label' => 'Nutzergruppen', 'url' => ['/site/usergroups']],
             ];
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -64,11 +64,11 @@ AppAsset::register($this);
             ?>
 
             <div class="container">
-<?=
-Breadcrumbs::widget([
-    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-])
-?>
+                <?=
+                Breadcrumbs::widget([
+                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                ])
+                ?>
                 <?= Alert::widget() ?>
                 <?= $content ?>
             </div>

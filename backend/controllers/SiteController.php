@@ -26,6 +26,8 @@ use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
 use common\models\Fach;
 use backend\models\KursUpdateForm;
+use common\models\Nutzergruppen;
+use common\models\Gruppenzuweisung;
 
 Yii::setAlias('@front', 'http://front.dev');
 
@@ -47,7 +49,8 @@ class SiteController extends Controller {
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'dozent', 'news', 'newsupdate', 'usergroups',
+                        'actions' => ['logout', 'index', 'dozent', 'news', 'newsupdate',
+                            'usergroups', 'usergroupsadd', 'usergroupsedit', 'usergroupsdelete',
                             'timetable', 'timetable', 'timetableview', 'updateevent', 'deleteevent',
                             'vvs', 'vvsadd', 'vvsupload', 'vvsedit', 'vvsdelete',
                             'tickermessages', 'addticker', 'editticker', 'deleteticker',
@@ -440,7 +443,36 @@ class SiteController extends Controller {
 //        var_dump($blub);
 //    }
     public function actionUsergroups() {
-        return $this->render('usergroups');
+        $model = Gruppenzuweisung::find()->joinWith('nutzergruppen')->all();
+        $newEntry = new Gruppenzuweisung();
+
+        return $this->render('usergroups', ['usergroups' => $model, 'newEntry' => $newEntry]);
+    }
+
+    public function actionUsergroupsadd() {
+        $model = new Gruppenzuweisung();
+        $model->name = $_POST['Gruppenzuweisung']['name'];
+        $model->nutzergruppen_id = $_POST['Gruppenzuweisung']['nutzergruppen_id'];
+
+        $model->save();
+        return $this->redirect(['/site/usergroups']);
+    }
+
+    public function actionUsergroupsedit() {
+        $model = Gruppenzuweisung::findOne($_POST['Gruppenzuweisung']['id']);
+
+        $model->name = $_POST['Gruppenzuweisung']['name'];
+        $model->nutzergruppen_id = $_POST['Gruppenzuweisung']['nutzergruppen_id'];
+
+        $model->update();
+        return $this->redirect(['/site/usergroups']);
+    }
+
+    public function actionUsergroupsdelete() {
+        $model = Gruppenzuweisung::findOne($_POST['Gruppenzuweisung']['id']);
+        $model->delete();
+
+        return $this->redirect(['/site/usergroups']);
     }
 
     public function actionVvs() {
@@ -459,10 +491,10 @@ class SiteController extends Controller {
 
         $file = UploadedFile::getInstance($model, 'file_path');
 
-        $model->file_path = 'media/vvs/' . $file->name;
-
 
         if ($file != NULL) {
+            $model->file_path = 'media/vvs/' . $file->name;
+
             $file->saveAs(Yii::getAlias('@frontend/web/media/vvs/') . $file->name);
         }
 
@@ -477,11 +509,12 @@ class SiteController extends Controller {
         $model->name = $_POST['Vvs']['name'];
         $model->direction = $_POST['Vvs']['direction'];
 
+
         $file = UploadedFile::getInstance($query, 'file_path');
 
-        $model->file_path = 'media/vvs/' . $file->name;
-
         if ($file != NULL) {
+            $model->file_path = 'media/vvs/' . $file->name;
+
             $file->saveAs(Yii::getAlias('@frontend/web/media/vvs/') . $file->name);
         }
 

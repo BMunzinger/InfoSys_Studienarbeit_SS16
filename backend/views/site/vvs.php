@@ -31,7 +31,7 @@ use backend\models\Vvsform;
                 <?= $form->field($item, 'file_path')->fileInput()->label(false) ?>
             </td>
             <td width="1%">
-                <?= Html::submitButton('Bearbeiten', ['class' => 'btn btn-success']); ?>
+                <?= Html::submitButton('<i class="glyphicon glyphicon-ok"></i>  Speichern', ['class' => 'btn btn-success']); ?>
             </td>
             <?php
             echo $form->field($item, 'id')->hiddenInput(['value' => $item->id])->label(false);
@@ -40,7 +40,7 @@ use backend\models\Vvsform;
             <td>
                 <?php
                 $form = ActiveForm::begin(['action' => ['vvsdelete']]);
-                echo Html::submitButton('Löschen', ['data' => ['confirm' => 'Möchten Sie denn Eintrag wirklich löschen?'], 'class' => 'btn btn-danger']);
+                echo Html::submitButton('<i class="glyphicon glyphicon-remove"></i> Löschen', ['data' => ['confirm' => 'Möchten Sie denn Eintrag wirklich löschen?'], 'class' => 'btn btn-danger']);
                 echo $form->field($item, 'id')->hiddenInput(['value' => $item->id])->label(false);
                 ?>
             </td>
@@ -56,7 +56,7 @@ use backend\models\Vvsform;
         <td><?= $form->field($newEntry, 'file_path')->fileInput()->label(false) ?>
         </td>
         <td colspan="2">
-            <?= Html::submitButton('Erstellen', ['class' => 'btn btn-success']); ?>
+            <?= Html::submitButton('<i class="glyphicon glyphicon-plus"></i> Erstellen', ['class' => 'btn btn-primary']); ?>
         </td>
     </tr>
     <?php
