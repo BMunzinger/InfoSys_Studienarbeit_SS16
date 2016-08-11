@@ -8,10 +8,11 @@ use \yii\db\ActiveRecord;
  */
 class Vvs extends ActiveRecord
 {
-public function rules() {
+    public function rules() {
         return [
             // name, email, subject and body are required
             [['name', 'direction', 'file_path'], 'required'],
         ];
     }
+
 }

@@ -6,8 +6,12 @@ use backend\models\NewsrssUpdate;
 
 $this->title = 'News';
 ?>
+<h1>News</h1>
 <div class="site-index">
     <?php foreach ($links as $link) { ?>
+        <div style="clear: both; margin-bottom: 12px;">
+            <?= $link->Description ?>
+        </div>
         <div style="width: 100%">
             <?php
             $form = ActiveForm::begin(['id' => 'newsupdate', 'action' => ['newsupdate']]);
@@ -25,9 +29,7 @@ $this->title = 'News';
                 <?= $form->field($newsRssUpdate, 'id')->hiddenInput(['value' => $link->ID])->label(false) ?>
                 <?= $form->field($newsRssUpdate, 'Description')->hiddenInput(['value' => $link->Description])->label(false) ?>
             </div>
-            <div style="clear: both;">
-                <?= $link->Description ?>
-            </div>
+
             <?php ActiveForm::end(); ?>
         </div>
     <?php } ?>

@@ -1,7 +1,7 @@
 <?php
 $this->title = 'Personenansicht';
 $this->params['breadcrumbs'][] = ['label' => 'Hauptmenü', 'url' => ['tiles']];
-$this->params['breadcrumbs'][] = ['label' => 'Dozenten', 'url' => ['dozent']];
+$this->params['breadcrumbs'][] = ['label' => 'Personen', 'url' => ['dozent']];
 $this->params['breadcrumbs'][] = $dozent->Name . ', ' . $dozent->Vorname;
 ?>
 <div class="row">

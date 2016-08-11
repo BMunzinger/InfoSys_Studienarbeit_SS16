@@ -16,8 +16,8 @@ $this->title = 'Stundenspläne';
 $semester = ['1' => 1, '2' => 2, '3' => 3, '4' => 4, '5' => 5, '6' => 6, '7' => 7];
 
 Modal::begin([
-    'header' => '<h2>Neuen Semester erstellen</h2>',
-    'toggleButton' => ['label' => '<i class="glyphicon glyphicon-plus"></i> Neuen Semester hinzufügen', 'class' => 'btn btn-primary'],
+    'header' => '<h2>Semester hinzufügen</h2>',
+    'toggleButton' => ['label' => '<i class="glyphicon glyphicon-plus"></i> Semester hinzufügen', 'class' => 'btn btn-primary'],
 ]);
 
 
@@ -28,7 +28,7 @@ $form = ActiveForm::begin([
 echo $form->field($newEntry, 'Semester')->label('Semesterbezeichnung');
 echo Html::radioList('Semester', 1, $semester);
 
-echo Html::submitButton('Speichern', ['class' => 'btn btn-info']);
+echo Html::submitButton('<i class="glyphicon glyphicon-plus"></i> Hinzufügen', ['class' => 'btn btn-info', 'style' => ['width' => '100%']]);
 
 
 ActiveForm::end();

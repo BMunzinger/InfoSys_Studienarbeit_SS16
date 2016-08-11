@@ -11,6 +11,13 @@ use \yii\db\ActiveRecord;
  */
 class Kursplan extends ActiveRecord {
 
+    public function rules() {
+        return [
+            // name, email, subject and body are required
+            [['Semester'], 'required'],
+        ];
+    }
+    
     public function getDozent() { // could be a static func as well
         return $this->hasOne(Dozent::className(), ['ID' => 'Dozent']);
     }
@@ -18,7 +25,5 @@ class Kursplan extends ActiveRecord {
     public function getFach() { // could be a static func as well
         return $this->hasOne(Fach::className(), ['ID' => 'Fach']);
     }
-
-    
 
 }

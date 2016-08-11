@@ -4,9 +4,11 @@
 use yii\widgets\ActiveForm;
 use yii\bootstrap\Modal;
 use backend\models\NewsdailyForm;
+use yii\helpers\Html;
 
 $this->title = 'Daily-News';
 ?>
+<h1>Daily-News</h1>
 <div class="site-index">
     <table class="table" style="width: 100%;">
         <tr>
@@ -23,7 +25,7 @@ $this->title = 'Daily-News';
                 <td>
                     <?php
                     Modal::begin([
-                        'header' => 'Ändern',
+                        'header' => '<h2>Daily-News bearbeiten</h2>',
                         'toggleButton' => ['label' => '<i class="glyphicon glyphicon-pencil"></i> bearbeiten', 'class' => 'btn btn-primary'],
                     ]);
 
@@ -49,9 +51,7 @@ $this->title = 'Daily-News';
                     <?= $form->field($deleteMessage, 'day')->hiddenInput(['value' => $message->day])->label(false) ?>
                     <?= $form->field($deleteMessage, 'message')->hiddenInput(['value' => $message->message])->label(false) ?>
 
-                    <button style="width: 100%;" type="submit" class="btn btn-danger">
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Löschen
-                    </button>
+                    <?= Html::submitButton('<i class="glyphicon glyphicon-remove"></i> Löschen', ['data' => ['confirm' => 'Möchten Sie den Eintrag wirklich löschen?'], 'class' => 'btn btn-danger', 'style' => ['width' => '100%']]); ?>
 
                     <?php
                     ActiveForm::end();
@@ -68,7 +68,7 @@ $this->title = 'Daily-News';
 
     <?php
     Modal::begin([
-        'header' => 'Daily-News hinzufügen',
+        'header' => '<h2>Daily-News hinzufügen</h2>',
         'toggleButton' => ['label' => '<i class="glyphicon glyphicon-plus"></i> Daily-News hinzufügen', 'class' => 'btn btn-primary'],
     ]);
 

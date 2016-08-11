@@ -16,10 +16,26 @@ use backend\models\Vvsform;
         <th>Linie</th>
         <th>Fahrtrichtung</th>
         <th>Datei</th>
-        <th colspan="2">Options</th>
+        <th colspan="2">Optionen</th>
     </tr>
-    <?php foreach ($items as $item) { ?>
-        <?php $form = ActiveForm::begin(['action' => ['vvsedit'], 'options' => ['enctype' => 'multipart/form-data']]); ?>
+    <?php
+    $form = ActiveForm::begin(['action' => ['vvsadd'], 'options' => ['enctype' => 'multipart/form-data']]);
+    ?>
+    <tr>
+        <td><?= $form->field($newEntry, 'name')->textInput(['placeholder' => 'Name'])->label(false) ?></td>
+        <td><?= $form->field($newEntry, 'direction')->textInput(['placeholder' => 'Fahrtrichtung'])->label(false) ?></td>
+        <td><?= $form->field($newEntry, 'file_path')->fileInput()->label(false) ?>
+        </td>
+        <td colspan="2">
+            <?= Html::submitButton('<i class="glyphicon glyphicon-plus"></i> Erstellen', ['class' => 'btn btn-primary']); ?>
+        </td>
+    </tr>
+    <?php
+    ActiveForm::end();
+
+    foreach ($items as $item) {
+        $form = ActiveForm::begin(['action' => ['vvsedit'], 'options' => ['enctype' => 'multipart/form-data']]);
+        ?>
         <tr>
             <td>
                 <?= $form->field($item, 'name')->textInput(['value' => $item->name])->label(false) ?>
@@ -40,26 +56,12 @@ use backend\models\Vvsform;
             <td>
                 <?php
                 $form = ActiveForm::begin(['action' => ['vvsdelete']]);
-                echo Html::submitButton('<i class="glyphicon glyphicon-remove"></i> Löschen', ['data' => ['confirm' => 'Möchten Sie denn Eintrag wirklich löschen?'], 'class' => 'btn btn-danger']);
+                echo Html::submitButton('<i class="glyphicon glyphicon-remove"></i> Löschen', ['data' => ['confirm' => 'Möchten Sie den Eintrag wirklich löschen?'], 'class' => 'btn btn-danger']);
                 echo $form->field($item, 'id')->hiddenInput(['value' => $item->id])->label(false);
                 ?>
             </td>
         </tr><?php
         ActiveForm::end();
     }
-    $form = ActiveForm::begin(['action' => ['vvsadd'], 'options' => ['enctype' => 'multipart/form-data']]);
-    ?>
-    <tr>
-
-        <td><?= $form->field($newEntry, 'name')->textInput(['placeholder' => 'Name'])->label(false) ?></td>
-        <td><?= $form->field($newEntry, 'direction')->textInput(['placeholder' => 'Fahrtrichtung'])->label(false) ?></td>
-        <td><?= $form->field($newEntry, 'file_path')->fileInput()->label(false) ?>
-        </td>
-        <td colspan="2">
-            <?= Html::submitButton('<i class="glyphicon glyphicon-plus"></i> Erstellen', ['class' => 'btn btn-primary']); ?>
-        </td>
-    </tr>
-    <?php
-    ActiveForm::end();
     ?>
 </table>

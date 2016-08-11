@@ -4,9 +4,11 @@
 use yii\widgets\ActiveForm;
 use yii\bootstrap\Modal;
 use backend\models\TickermeldungenForm;
+use yii\helpers\Html;
 
 $this->title = 'Tickermeldungen';
 ?>
+<h1>Tickermeldungen</h1>
 <div class="site-index">
     <table class="table" style="width: 100%;">
         <tr>
@@ -23,7 +25,7 @@ $this->title = 'Tickermeldungen';
                 <td>
                     <?php
                     Modal::begin([
-                        'header' => 'Ändern',
+                        'header' => '<h2>Tickermeldung bearbeiten</h2>',
                         'toggleButton' => ['label' => '<i class="glyphicon glyphicon-pencil"></i> bearbeiten', 'class' => 'btn btn-primary'],
                     ]);
 
@@ -49,9 +51,7 @@ $this->title = 'Tickermeldungen';
                     <?= $form->field($deleteMessage, 'Ablaufdatum')->hiddenInput(['value' => $message->Ablaufdatum])->label(false) ?>
                     <?= $form->field($deleteMessage, 'text')->hiddenInput(['value' => $message->text])->label(false) ?>
 
-                    <button style="width: 100%;" type="submit" class="btn btn-danger">
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Löschen
-                    </button>
+                    <?= Html::submitButton('<i class="glyphicon glyphicon-remove"></i> Löschen', ['data' => ['confirm' => 'Möchten Sie den Eintrag wirklich löschen?'], 'class' => 'btn btn-danger', 'style' => ['width' => '100%']]); ?>
 
                     <?php
                     ActiveForm::end();
@@ -68,7 +68,7 @@ $this->title = 'Tickermeldungen';
 
     <?php
     Modal::begin([
-        'header' => 'Tickermeldung hinzufügen',
+        'header' => '<h2>Tickermeldung hinzufügen</h2>',
         'toggleButton' => ['label' => '<i class="glyphicon glyphicon-plus"></i> Tickermeldung hinzufügen', 'class' => 'btn btn-primary'],
     ]);
 

@@ -39,12 +39,16 @@ $this->title = 'Nutzergruppen';
                 <?php
                 echo $form->field($usergroup, 'id')->hiddenInput()->label(false);
                 ActiveForm::end();
-                $form = ActiveForm::begin(['action' => ['usergroupsdelete']]);
                 ?>
-                <td><?= Html::submitButton('<i class="glyphicon glyphicon-remove"></i>  Löschen', ['class' => 'btn btn-danger']); ?></td>
+                <td>
+                    <?php
+                    $form = ActiveForm::begin(['action' => ['usergroupsdelete']]);
+                    echo Html::submitButton('<i class="glyphicon glyphicon-remove"></i>  Löschen', ['data' => ['confirm' => 'Möchten Sie den Eintrag wirklich löschen?'], 'class' => 'btn btn-danger']);
+                    echo $form->field($usergroup, 'id')->hiddenInput()->label(false);
+                    ?>
+                </td>
             </tr>
             <?php
-            echo $form->field($usergroup, 'id')->hiddenInput()->label(false);
             ActiveForm::end();
         }
         ?>

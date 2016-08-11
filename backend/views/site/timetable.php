@@ -16,8 +16,8 @@ $this->title = 'Stundenspläne';
     $block = ['1. Block', '2. Block', '3. Block', '4. Block', '5. Block', '6. Block'];
 
     Modal::begin([
-        'header' => '<h2>Neuen Kurs erstellen</h2>',
-        'toggleButton' => ['label' => 'Neuen Kurs hinzufügen', 'class' => 'btn btn-info'],
+        'header' => '<h2>Kurs hinzufügen</h2>',
+        'toggleButton' => ['label' => '<i class="glyphicon glyphicon-plus"></i> Kurs hinzufügen', 'class' => 'btn btn-info'],
     ]);
 
     $form = ActiveForm::begin([
@@ -40,7 +40,7 @@ $this->title = 'Stundenspläne';
     ?>
     <?= $form->field($newEntry, 'Wochentag')->dropDownList($wochentag, ['prompt' => 'Wochentag auswählen']) ?>
 
-    <?= Html::submitButton('Speichern', ['class' => 'btn btn-success']) ?>
+    <?= Html::submitButton('<i class="glyphicon glyphicon-ok"></i> Speichern', ['class' => 'btn btn-success', 'style' => ['width' => '100%']]) ?>
 
     <?php
     ActiveForm::end();
@@ -73,7 +73,7 @@ foreach ($q as $t) {
             ->dropDownList($wochentag, ['prompt' => 'Wochentag auswählen']);
 
 
-    echo Html::submitButton('Speichern', ['class' => 'btn btn-success']);
+    echo Html::submitButton('<i class="glyphicon glyphicon-ok"></i> Speichern', ['class' => 'btn btn-success', 'style' => ['width' => '100%']]);
 
     echo $form->field($model, 'ID')->hiddenInput()->label(false);
     echo $form->field($model, 'Semester')->hiddenInput()->label(false);
@@ -85,7 +85,7 @@ foreach ($q as $t) {
     ]);
     echo $form->field($model, 'ID')->hiddenInput()->label(false);
     echo $form->field($model, 'Semester')->hiddenInput()->label(false);
-    echo Html::submitButton('Löschen', ['data' => ['confirm' => 'Möchten Sie denn Eintrag wirklich löschen?'], 'class' => 'btn btn-danger']);
+    echo Html::submitButton('<i class="glyphicon glyphicon-remove"></i> Löschen', ['data' => ['confirm' => 'Möchten Sie den Eintrag wirklich löschen?'], 'class' => 'btn btn-danger', 'style' => ['width' => '100%']]);
     ActiveForm::end();
     Modal::end();
     ?>

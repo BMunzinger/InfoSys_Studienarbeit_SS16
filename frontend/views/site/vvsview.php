@@ -2,7 +2,7 @@
 
 $this->title = 'VVS View';
 $this->params['breadcrumbs'][] = ['label' => 'Hauptmenü', 'url' => ['tiles']];
-$this->params['breadcrumbs'][] = ['label' => 'VVS', 'url' => ['vvs']];
+$this->params['breadcrumbs'][] = ['label' => 'Fahrpläne', 'url' => ['vvs']];
 $this->params['breadcrumbs'][] = $vvs->name . ' (' . $vvs->direction . ')';
 
 $file = 'media/vvs/Linie112.pdf';

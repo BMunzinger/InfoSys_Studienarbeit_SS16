@@ -3,15 +3,17 @@
 
 use yii\bootstrap\ActiveForm;
 use backend\models\AuthorisiertenummernForm;
+use yii\helpers\Html;
 
 $this->title = 'SMS-Meldungen';
 ?>
+<h1>SMS-Meldungen</h1>
 <div class="site-index">
     <table class="table" style="width: 100%;">
         <tr>
             <th>Name</th>
             <th>Nummer</th>
-            <th style="width: 1%"></th>
+            <th style="width: 1%">Optionen</th>
             <th style="width: 1%"></th>
         </tr>
          <?php
@@ -47,10 +49,7 @@ $this->title = 'SMS-Meldungen';
                 </td>
                 <td>
                     <?php $form = ActiveForm::begin(['id' => 'removenumber', 'action' => ['removenumber']]); ?>
-                    <?php //echo Html::submitButton('Löschen', ['data' => ['confirm' => 'Möchten Sie denn Eintrag wirklich löschen?'], 'class' => 'btn btn-info']); ?>
-                    <button type="submit" name="remove" value="remove" class="btn btn-danger" aria-label="Remove">
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Entfernen
-                    </button>
+                    <?= Html::submitButton('<i class="glyphicon glyphicon-remove"></i> Löschen', ['data' => ['confirm' => 'Möchten Sie den Eintrag wirklich löschen?'], 'class' => 'btn btn-danger']); ?>
                     <?= $form->field($changedNumber, 'name')->hiddenInput(['value' => $number->name])->label(false) ?>
                     <?= $form->field($changedNumber, 'nummer')->hiddenInput(['value' => $number->nummer])->label(false) ?>
                     <?= $form->field($changedNumber, 'oldnumber')->hiddenInput(['value' => $number->nummer])->label(false) ?>

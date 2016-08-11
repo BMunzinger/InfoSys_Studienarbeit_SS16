@@ -10,7 +10,7 @@ use backend\models\DozentPictureForm;
 $this->title = 'Personen';
 ?>
 
-<!-- <h1>Dozent</h1> -->
+ <h1>Dozent</h1> 
 
 
 <div class="site-index">
@@ -65,12 +65,13 @@ $this->title = 'Personen';
                         </div>
                         <?php
                         ActiveForm::end();
-
-                        $form = ActiveForm::begin(['id' => 'edit-dozent-form', 'action' => ['editdozent']]);
+                        ?>
+                        <div style="clear: both;">
+                            <?php
+                            $form = ActiveForm::begin(['id' => 'edit-dozent-form', 'action' => ['editdozent']]);
 
                         $editDozent = new DozentUpdateForm();
                         ?>
-                        <div style="clear: both;">
                             <hr>
                             <?= $form->field($editDozent, 'id')->hiddenInput(['value' => $dozent->ID])->label(false) ?>
                             <?= $form->field($editDozent, 'name')->textInput(['value' => $dozent->Name]) ?>
@@ -86,17 +87,19 @@ $this->title = 'Personen';
                             </button>
                             <?php
                             ActiveForm::end();
+                            
                             $form = ActiveForm::begin(['id' => 'remove-dozent-form', 'action' => ['removedozent']]);
+                            $deleteDozent = new DozentUpdateForm();
                             ?>
-                            <?= $form->field($editDozent, 'id')->hiddenInput(['value' => $dozent->ID])->label(false) ?>
-                            <button style="width: 100%;" type="submit" class="btn btn-danger">
-                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Löschen
-                            </button>
+                            <?= $form->field($deleteDozent, 'id')->hiddenInput(['value' => $dozent->ID])->label(false) ?>
+                            <?= Html::submitButton('<i class="glyphicon glyphicon-remove"></i> Löschen', ['data' => ['confirm' => 'Möchten Sie den Eintrag wirklich löschen?'], 'class' => 'btn btn-danger', 'style' => ['width' => '100%']]); ?>
+                            <?php
+                            ActiveForm::end();
+                            ?>
                         </div>
                     </div>
 
                     <?php
-                    ActiveForm::end();
                     Modal::end();
                     ?>
                 </td>

@@ -11,12 +11,12 @@ $this->title = 'Fach';
 
 <!-- <h1>Fach</h1> -->
 
-
+<h1>Kurse</h1>
 <div class="site-index">
     <table class="table" style="width: 100%;">
         <tr>
             <th>Name</th>
-            <th colspan="2" width="1%"></th>
+            <th colspan="2" width="1%">Optionen</th>
         </tr>
         <tr>
             <?php
@@ -51,14 +51,15 @@ $this->title = 'Fach';
                 <?= $form->field($editKurs, 'ID')->hiddenInput(['value' => $item->ID])->label(false); ?>
                 <?php ActiveForm::end(); ?>
 
-                <?php
-                $form = ActiveForm::begin(['id' => 'remove-kurs-form', 'action' => ['removekurs']]);
-                echo $form->field($editKurs, 'ID')->hiddenInput(['value' => $item->ID])->label(false);
-                ?>
+
                 <td>
-                    <?= Html::submitButton('<i class="glyphicon glyphicon-remove"></i> Löschen', ['class' => 'btn btn-danger']); ?>
+                    <?php
+                    $form = ActiveForm::begin(['id' => 'remove-kurs-form', 'action' => ['removekurs']]);
+                    ?>
+                    <?= Html::submitButton('<i class="glyphicon glyphicon-remove"></i> Löschen', ['data' => ['confirm' => 'Möchten Sie den Eintrag wirklich löschen?'], 'class' => 'btn btn-danger']); ?>
                 </td>
                 <?php
+                echo $form->field($editKurs, 'ID')->hiddenInput(['value' => $item->ID])->label(false);
                 ActiveForm::end();
                 ?>
             </tr>

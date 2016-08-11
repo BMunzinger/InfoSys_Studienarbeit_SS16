@@ -9,7 +9,6 @@ use common\models\LoginForm;
 use yii\filters\VerbFilter;
 use common\models\Dozent;
 use common\models\Vvs;
-use backend\models\Vvsform;
 use backend\models\DozentUpdateForm;
 use backend\models\DozentPictureForm;
 use common\models\Kursplan;
@@ -181,9 +180,9 @@ class SiteController extends Controller {
         $newsRssUpdate->Description = $_POST['NewsrssUpdate']['Description'];
 
         if ($newsRssUpdate->update()) {
-            Yii::$app->session->setFlash('success', 'Der Änderung wurde gespeichert!');
+            Yii::$app->session->setFlash('success', 'Die Änderungen wurden erfolgreich übernommen.');
         } else {
-            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Ändern der Daten!');
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
         }
         return $this->redirect(['news']);
     }
@@ -278,7 +277,7 @@ class SiteController extends Controller {
             $events[] = $event;
         }
 
-        if ($newEntry->load(Yii::$app->request->post()) && $newEntry->validate()) {
+        if ($newEntry->load(Yii::$app->request->post())) {
 
             switch ($_POST['Kursplan']['Wochentag']) {
                 case 0: $weekday = 'Montag';
@@ -334,8 +333,12 @@ class SiteController extends Controller {
             $newEntry->Wochentag = $weekday;
             $newEntry->Semester = $kurs;
 
-            if ($newEntry->save())
+            if ($newEntry->save()) {
+                Yii::$app->session->setFlash('success', 'Der Eintrag wurde erfolgreich erstellt!');
                 Yii::$app->response->redirect(array('site/timetable'));
+            } else {
+                Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
+            }
             return $this->refresh();
         }
 
@@ -361,8 +364,12 @@ class SiteController extends Controller {
             $newEntry->ZeitVon = '7:35';
             $newEntry->ZeitBis = '9:05';
             $newEntry->Wochentag = 'Montag';
-            if ($newEntry->save())
+            if ($newEntry->save()) {
+                Yii::$app->session->setFlash('success', 'Der Eintrag wurde erfolgreich erstellt!');
                 Yii::$app->response->redirect(array('site/timetableview'));
+            } else {
+                Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
+            }
             return $this->refresh();
         }
 
@@ -427,14 +434,22 @@ class SiteController extends Controller {
         $model->ZeitBis = $zeitbis;
         $model->Wochentag = $weekday;
 
-        $model->update();
+        if ($model->update()) {
+            Yii::$app->session->setFlash('success', 'Die Änderungen wurden erfolgreich übernommen.');
+        } else {
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
+        }
         return $this->redirect(['/site/timetable', 'kurs' => $_POST['Kursplan']['Semester']]);
     }
 
     public function actionDeleteevent() {
         $model = Kursplan::findOne($_POST['Kursplan']['ID']);
 
-        $model->delete();
+        if ($model->delete()) {
+            Yii::$app->session->setFlash('success', 'Der Eintrag wurde erfolgreich gelöscht.');
+        } else {
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Löschen der Daten!');
+        }
 
         return $this->redirect(['/site/timetable', 'kurs' => $_POST['Kursplan']['Semester']]);
     }
@@ -454,7 +469,11 @@ class SiteController extends Controller {
         $model->name = $_POST['Gruppenzuweisung']['name'];
         $model->nutzergruppen_id = $_POST['Gruppenzuweisung']['nutzergruppen_id'];
 
-        $model->save();
+        if ($model->save()) {
+            Yii::$app->session->setFlash('success', 'Der Eintrag wurde erfolgreich erstellt!');
+        } else {
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
+        }
         return $this->redirect(['/site/usergroups']);
     }
 
@@ -464,13 +483,22 @@ class SiteController extends Controller {
         $model->name = $_POST['Gruppenzuweisung']['name'];
         $model->nutzergruppen_id = $_POST['Gruppenzuweisung']['nutzergruppen_id'];
 
-        $model->update();
+        if ($model->update()) {
+            Yii::$app->session->setFlash('success', 'Die Änderungen wurden erfolgreich übernommen.');
+        } else {
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
+        }
         return $this->redirect(['/site/usergroups']);
     }
 
     public function actionUsergroupsdelete() {
         $model = Gruppenzuweisung::findOne($_POST['Gruppenzuweisung']['id']);
-        $model->delete();
+
+        if ($model->delete()) {
+            Yii::$app->session->setFlash('success', 'Der Eintrag wurde erfolgreich gelöscht.');
+        } else {
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Löschen der Daten!');
+        }
 
         return $this->redirect(['/site/usergroups']);
     }
@@ -498,7 +526,11 @@ class SiteController extends Controller {
             $file->saveAs(Yii::getAlias('@frontend/web/media/vvs/') . $file->name);
         }
 
-        $model->save();
+        if ($model->save()) {
+            Yii::$app->session->setFlash('success', 'Der Eintrag wurde erfolgreich erstellt!');
+        } else {
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
+        }
         return $this->redirect(['/site/vvs']);
     }
 
@@ -518,13 +550,21 @@ class SiteController extends Controller {
             $file->saveAs(Yii::getAlias('@frontend/web/media/vvs/') . $file->name);
         }
 
-        $model->update();
+        if ($model->update()) {
+            Yii::$app->session->setFlash('success', 'Die Änderungen wurden erfolgreich übernommen.');
+        } else {
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
+        }
         return $this->redirect(['/site/vvs']);
     }
 
     public function actionVvsdelete() {
         $model = Vvs::findOne($_POST['Vvs']['id']);
-        $model->delete();
+        if ($model->delete()) {
+            Yii::$app->session->setFlash('success', 'Der Eintrag wurde erfolgreich gelöscht.');
+        } else {
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Löschen der Daten!');
+        }
 
         return $this->redirect(['/site/vvs']);
     }
@@ -575,8 +615,9 @@ class SiteController extends Controller {
 
     public function actionSmsmessage() {
         $query = Authorisiertenummern::find()->orderBy('name')->all();
+        $newNumber = new
 
-        $newNumber = new AuthorisiertenummernForm();
+                AuthorisiertenummernForm();
         $changedNumber = new AuthorisiertenummernForm();
 
         return $this->render('smsmessage', ['numbers' => $query, 'newNumber' => $newNumber, 'changedNumber' => $changedNumber]);
@@ -590,7 +631,8 @@ class SiteController extends Controller {
 
         //////// ADD NEW NUMBER /////////
         if ($newNumber->addNumber()) {
-            Yii::$app->session->setFlash('success', 'Der Eintrag wurde erstellt!');
+            Yii::$app->session->setFlash(
+                    'success', 'Der Eintrag wurde erstellt!');
         } else {
             Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Erstellen der Daten!');
         }
@@ -606,7 +648,8 @@ class SiteController extends Controller {
 
         //////// DELETE NUMBER /////////
         if ($removeNumber->deleteNumber()) {
-            Yii::$app->session->setFlash('success', 'Der Eintrag wurde gelöscht!');
+            Yii::$app->session->setFlash(
+                    'success', 'Der Eintrag wurde gelöscht!');
         } else {
             Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Löschen der Daten!');
         }
@@ -623,9 +666,9 @@ class SiteController extends Controller {
 
         //////// CHANGE NUMBER /////////
         if ($editNumber->update()) {
-            Yii::$app->session->setFlash('success', 'Der Eintrag wurde geändert!');
+            Yii::$app->session->setFlash('success', 'Die Änderungen wurden erfolgreich übernommen.');
         } else {
-            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Ändern der Daten!');
+            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
         }
 
         return $this->redirect(['smsmessage']);
@@ -644,7 +687,8 @@ class SiteController extends Controller {
 
         //////// ADD NEW KURS /////////
         if ($newKurs->add()) {
-            Yii::$app->session->setFlash('success', 'Der Eintrag wurde erstellt!');
+            Yii::$app->session->setFlash
+                    ('success', 'Der Eintrag wurde erstellt!');
         } else {
             Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Erstellen der Daten!');
         }
@@ -690,7 +734,6 @@ class SiteController extends Controller {
 
             $editDozentPictureUpdate->dozentPictureForm->picture = UploadedFile::getInstance($editDozentPictureUpdate->dozentPictureForm, 'picture');
             $editDozentPictureUpdate->id = $_POST['DozentPictureUpdateForm']['id'];
-
             if ($editDozentPictureUpdate->upload()) {
                 Yii::$app->session->setFlash('success', 'Das Bild wurde erfolgreich hochgeladen.');
             } else {
@@ -718,7 +761,8 @@ class SiteController extends Controller {
 
         //////// ADD NEW DOZENT /////////
         if ($newDozent->add()) {
-            Yii::$app->session->setFlash('success', 'Der Eintrag wurde erstellt!');
+            Yii::$app->session->setFlash(
+                    'success', 'Der Eintrag wurde erstellt!');
         } else {
             Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Erstellen der Daten!');
         }
@@ -743,7 +787,8 @@ class SiteController extends Controller {
         if ($dozent->update()) {
             Yii::$app->session->setFlash('success', 'Die Änderungen wurden erfolgreich übernommen.');
         } else {
-            Yii::$app->session->setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
+            Yii::$app->session->
+                    setFlash('error', 'Es gab einen Fehler beim Speichern der Daten!');
         }
 
         return $this->redirect(['dozent']);
@@ -756,8 +801,6 @@ class SiteController extends Controller {
     }
 
     public function actionRemovedozent() {
-
-
         $dozent = new DozentUpdateForm();
         $dozent->id = $_POST['DozentUpdateForm']['id'];
         $dozent->name = '';

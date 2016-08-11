@@ -1,5 +1,5 @@
 <?php
-$this->title = 'Dozenten';
+$this->title = 'Personen';
 $this->params['breadcrumbs'][] = ['label' => 'Hauptmenü', 'url' => ['tiles']];
 $this->params['breadcrumbs'][] = $this->title;
 
@@ -13,7 +13,7 @@ $tileColors = ['blue', 'green', 'red'];
         ?>
 
         <div class="allDozent hidden-sm hidden-xs">
-            <div class="thumbnail tile tile-large tile-clouds">
+            <div class="thumbnail tile tile-large tile-white" style="height: 100%">
                 <?php
                 if ($dozent->Picture != NULL) {
                     echo Html::a(''
@@ -97,8 +97,7 @@ foreach ($dozents as $dozent) {
     .dozentName {
         display: table-cell;
         vertical-align: middle;
-        line-height: normal; 
-        border-top: 1px solid #34495e;
+        line-height: normal;
         color: black;
     }
 
@@ -110,6 +109,14 @@ foreach ($dozents as $dozent) {
     .allDozent > div {
         margin-right: 30px;
         display: inline-block;
+    }
+    
+    .tile.tile-white {
+        background-color: #FFF;
+    }
+    
+    .tile.tile-white .dozentName {
+        color: #000;
     }
 </style>
 
